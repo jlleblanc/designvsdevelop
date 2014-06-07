@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design vs. Develop &#187; mootools</title>
+	<atom:link href="http://www.designvsdevelop.com/tag/mootools/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.designvsdevelop.com</link>
+	<description>the department of planned spontaneity</description>
+	<lastBuildDate>Fri, 20 May 2011 15:36:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<item>
+		<title>jQuery in Joomla: I was wrong</title>
+		<link>http://www.designvsdevelop.com/jquery-in-joomla-i-was-wrong/</link>
+		<comments>http://www.designvsdevelop.com/jquery-in-joomla-i-was-wrong/#comments</comments>
+		<pubDate>Fri, 12 Nov 2010 13:47:49 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[mootools]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=420</guid>
+		<description><![CDATA[For quite some time now, it’s been no secret that I’m a fan of jQuery and prefer it to MooTools for JavaScript development. However, Joomla ships with MooTools as the preferred JavaScript framework. Both jQuery and MooTools like using $ as a shortcut method name, which can cause conflicts. Fortunately, both frameworks have ways of [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>For quite some time now, it’s been no secret that I’m a fan of jQuery and prefer it to MooTools for JavaScript development. However, Joomla ships with MooTools as the preferred JavaScript framework. Both jQuery and MooTools like using $ as a shortcut method name, which can cause conflicts. Fortunately, both frameworks have ways of disabling this shortcut so that you can use them side by side.</p>
+<p>Unfortunately, if you’re not paying attention to the ordering of the JavaScripts, you can end up loading both before you have a chance of sending one into “no conflicts” mode. For quite some time now, I’ve advised fellow Joomla developers to always load MooTools first. It turns out that this advice is not correct, and can cause you to load up MooTools when you’re not even going to use it.</p>
+<p>So I’d like to explain why I came to this conclusion in the first place, the correct way of avoiding the problem, and a call to solve this centrally so that people don’t have six copies of jQuery loading on their websites.</p>
+<h3 id="the_real_issue">The real issue</h3>
+<p>The core issue has to do with the way JDocument adds JavaScript to the HTML document. As you call JDocument::addScript(), JDocument makes an internal list of all the JavaScript files it needs to load. Also, calling JHTML::_(‘behavior.mootools’) adds the MooTools framework to this list. You can also pass JavaScript in a string to be added directly in &lt;script&gt; tags through the JDocument::addScriptDeclaration() method. With these methods in mind, you would assume that you could add jQuery via JDocument::addScript() and the JavaScript snippet ‘jQuery.noConflict()’ through JDocument::addScriptDeclaration(), like this:</p>
+<pre><code>$document = JFactory::getDocument();
+$document-&gt;addScript('path/to/jquery.js');
+$document-&gt;addScriptDeclaration('jQuery.noConflict()');
+</code></pre>
+<p>This sometimes works. However, if (for instance) your module used jQuery and the next one used MooTools, you’d run into a conflict even though you had $document-&gt;addScriptDeclaration(‘jQuery.noConflict()’) in your code. The advice passed around by myself and the Joomla community was to do this in your code:</p>
+<pre><code>JHTML::_('behavior.mootools');
+$document = JFactory::getDocument();
+$document-&gt;addScript('path/to/jquery.js');
+$document-&gt;addScriptDeclaration('jQuery.noConflict()');
+</code></pre>
+<p>This ensured that MooTools got loaded first and that the conflict would not happen. This also forced MooTools onto the page regardless of whether or not it was being used. It turns out this approach doesn’t really address the real problem: Joomla loads all of your external scripts first, then loads all of your script declarations. So for instance, the following code snippets result in the same script ordering as the previous sample:</p>
+<pre><code>$document = JFactory::getDocument();
+$document-&gt;addScriptDeclaration('jQuery.noConflict()');
+JHTML::_('behavior.mootools');
+$document-&gt;addScript('path/to/jquery.js');
+
+$document = JFactory::getDocument();
+JHTML::_('behavior.mootools');
+$document-&gt;addScriptDeclaration('jQuery.noConflict()');
+$document-&gt;addScript('path/to/jquery.js');
+</code></pre>
+<h3 id="the_fix">The fix</h3>
+<p>To genuinely solve the problem and not worry about MooTools, you need to first create a JavaScript file with the code jQuery.noConflict();. Then you need to load jQuery, then load the file containing the jQuery.noConflict(); code. Your code in Joomla would look like this:</p>
+<pre><code>$document = JFactory::getDocument();
+$document-&gt;addScript('path/to/jquery.js');
+$document-&gt;addScript('path/to/jquery.noconflict.js');
+</code></pre>
+<p>In this example, jquery.noconflict.js contains the following code:</p>
+<pre><code>jQuery.noConflict();
+</code></pre>
+<p>By doing this, it’s guaranteed that jQuery.noConflict() will get called <em>immediately</em> after jQuery is loaded by the browser. To recap, <strong>the ordering of MooTools and jQuery does not matter if you make sure jQuery.noConflict() is called immediately after jQuery is loaded</strong>. After you send jQuery into noConflict mode, you still must either use jQuery() instead of $(), or use one of the referencing methods described <a href="http://docs.jquery.com/Using_jQuery_with_Other_Libraries#Referencing_Magic_-_Shortcuts_for_jQuery">here</a> in your jQuery-powered code.</p>
+<h3 id="but_wait_i_still_have_a_thousand_extensions_all_loading_jquery">But wait, I still have a thousand extensions all loading jQuery!</h3>
+<p>Ideally, each Joomla site should be loading either zero or one copies of jQuery. Having multiple copies of jQuery sitting around Joomla puts site owners in the position of having to manage conflicts. Also, distributing multiple copies of jQuery discourages the use of <a href="http://code.google.com/apis/libraries/devguide.html">Google’s JavaScript library CDN</a>. We don’t want to foist this problem onto site administrators; they just want all of their extensions to work.</p>
+<p>Fortunately, there’s an <a href="http://people.joomla.org/groups/viewdiscussion/783-Best+practices+for+extension+developers+using+jQuery.html?groupid=445">effort underway</a> to standardize and document the use of jQuery in Joomla. If you’re willing to help out, join our <a href="http://people.joomla.org/groups/viewgroup/445-jQuery+Discussions.html">Joomla People Group</a> jump into the discussion. We should be able to document a way for extension developers to bundle a jQuery plugin with their extensions, as well as avoid version conflicts. Ultimately, a copy of jQuery should be installed and updated as necessary without the intervention of site administrators.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/jquery-in-joomla-i-was-wrong/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Using MooTools and jQuery Together in Joomla!</title>
+		<link>http://www.designvsdevelop.com/using-mootools-and-jquery-together-in-joomla/</link>
+		<comments>http://www.designvsdevelop.com/using-mootools-and-jquery-together-in-joomla/#comments</comments>
+		<pubDate>Wed, 17 Dec 2008 16:33:17 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[documentation]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[Joomla 1.5]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[mootools]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=312</guid>
+		<description><![CDATA[Framework conflicts are a common problem people run into when using jQuery. While jQuery provides some tricks you can use to get around this, you may still run into issues when Joomla! generates MooTools effects. While writing the second edition of Learning Joomla! Extension Development, I decided to do a chapter on JavaScript and look [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Framework conflicts are a common problem people run into when using jQuery. While jQuery provides some <a href="http://docs.jquery.com/Using_jQuery_with_Other_Libraries">tricks you can use</a> to get around this, you may still run into issues when Joomla! generates MooTools effects. While writing the second edition of <a href="http://www.packtpub.com/learning-joomla!-1.5-extension-development/book">Learning Joomla! Extension Development</a>, I decided to do a chapter on JavaScript and look into this problem a little bit more closely. It turns out you have to make sure MooTools loads before jQuery, then use one of the tricks detailed on jquery.com.</p>
+<p>Fortunately, this can be done in Joomla! consistenly, so I documented it. Packt decided to release the entire JavaScript chapter as the <a href="http://www.packtpub.com/files/learning-joomla-1-5-extension-development-sample-chapter-8-using-javascript-effects.pdf">sample PDF</a> for my book, so you can read everything you need to know about implementing this technique for free!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/using-mootools-and-jquery-together-in-joomla/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

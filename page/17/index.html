@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Design vs. Develop</title>
+<script type="text/javascript" src="../../wp-content/themes/DesignVsDevelop/script.js"></script>
+<link rel="stylesheet" href="../../wp-content/themes/DesignVsDevelop/style.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Design vs. Develop RSS Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/atom+xml" title="Design vs. Develop Atom Feed" href="../../feed/atom/index.html" /> 
+<link rel="pingback" href="../../xmlrpc.php" />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js%3Fver=1.11.0'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+<link href="../../wp-content/plugins/spam-stopper/spam-stopper.css" rel="stylesheet" type="text/css" />			<script type="text/javascript">
+			/* <![CDATA[ */
+				if (typeof jQuery == 'undefined') {  
+	   				 // jQuery is not loaded  
+				} else {
+					jQuery(function(){
+						jQuery('#commentform').submit(function(){
+								if (jQuery('#author').val()=="") {
+									alert("Please input your name");
+									return false;     		
+								}
+								var email_field = jQuery('#email');
+								var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+								if (!emailFilter.test(email_field.val())) {
+									alert("Please input a valid email");
+									return false;
+								}
+								if (jQuery('#spamq').val()=="") {
+									alert("Please answer the anti-spam question");
+									return false;
+								}
+								if (jQuery('#comment').val()=="") {
+									alert("Please input a comment");
+									return false;
+								}
+								var spamq = jQuery('#spamq').val();			
+								if (spamq.toUpperCase()!=='HOT') {
+									alert("Incorrect anti-spam answer. Please re-answer the question! The correct answer is \"Hot\"");
+									return false;
+								}
+								return true;
+						});
+					});
+				}
+			/* ]]> */
+			</script>
+				<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<div id="art-page-background-simple-gradient">
+</div>
+<div id="art-main">
+<div class="art-Sheet">
+    <div class="art-Sheet-tl"></div>
+    <div class="art-Sheet-tr"></div>
+    <div class="art-Sheet-bl"></div>
+    <div class="art-Sheet-br"></div>
+    <div class="art-Sheet-tc"></div>
+    <div class="art-Sheet-bc"></div>
+    <div class="art-Sheet-cl"></div>
+    <div class="art-Sheet-cr"></div>
+    <div class="art-Sheet-cc"></div>
+    <div class="art-Sheet-body">
+<div class="art-Header">
+    <div class="art-Header-jpeg"></div>
+
+</div>
+<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+		<li><a class="active" href="../../index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="page_item page-item-234"><a href="../../about/index.html"><span class="l"></span><span class="r"></span><span class="t">About</span></a></li>
+	</ul>
+</div>
+<div class="art-contentLayout">
+<div class="art-content">
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Predicting the next Silicon Valley">
+Predicting the next Silicon Valley</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+June 25th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p><a href="http://www.eweek.com/article2/0,1895,1977764,00.asp">This article</a> attempts to predict where the next technology hub will appear. This unsuprisingly shallow piece quotes that all you need are &#8220;rich people and nerds,&#8221; and blithely proceeds to list population and job statistics from the same two sources ten times over.</p>
+<p>There are multiple flaws with this analysis. First, the classification of a &#8220;tech job&#8221; is extremely vague. At the end of the article, Las Vegas is mentioned as a possible contender due to bearing a large number of call centers. If we were go to by this definition, Tulsa should have been San Jose by now. It would seem that according to eWEEK, anyone who uses a computer at work could be classified as a &#8220;tech worker.&#8221; Next, they assume that Northern California will fade as a hub due to the high cost of living. Ironically enough, Seattle, Boston, DC, and Los Angeles are then mentioned as potential &#8220;next hub&#8221; contenders. While the SF Bay is definitely expensive, these cities are definitely not cheap. Also, their own analysis doesn&#8217;t even match up to their thesis that you only need &#8220;rich people and nerds&#8221; as they have no statistics on wealth in the article. Finally, they ignore factors such as nearby colleges, Internet connectivity, and R&#038;D spending by local firms.</p>
+<p>I wouldn&#8217;t typically bring up such a thin article, except that it&#8217;s the same thought process used by most cities trying to revitalize themsevles. Someone correct me if I&#8217;m wrong, but I don&#8217;t think the State of California ever offered financial incentives for Hewlett Packard, Apple, Oracle, or Intel to locate in the Bay Area. Yet you see cities like Pittsburgh, Detroit, and Cleveland attempt to land a big company by handing over wads of cash. These deals are usually tied to some promise to stay in the area for X number of years, which may or may not be kept. In the end, the &#8220;revitalization&#8221; is usually very limited and localized. Meanwhile, roads go unfixed, schools decline, and public services are cut. How long will it be before these cities realize that they have to actively create an environment that will attract talent?</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Septic tanks, part II">
+Septic tanks, part II</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+June 3rd, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>Evidently, there&#8217;s a bigger push to install composting and low-impact toilets than I had first realized. In this <a href="http://www.washingtonpost.com/wp-dyn/content/article/2006/06/02/AR2006060201831.html">article</a>, we see huge fights developing over such proposals. I&#8217;m surprised that even dual-flush systems (two buttons for two different water amounts) are tough sells; office building managers aren&#8217;t giving up touchless toilets.</p>
+<p>The best part of the article is the description of a composting toilet at the end:</p>
+<blockquote><p>
+The toilets are white and sleek. The compost pile lies about 10 feet beneath a plastic chute. Near each toilet stands a pail of wood chips, with a sign inviting people to toss in a handful after each use.</p>
+<p>That&#8217;s not really necessary, Foster said. It&#8217;s for people, he said, &#8220;who want to flush.&#8221;</p>
+<p>&#8220;They want some kind of closure.&#8221;
+</p></blockquote>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Recess is for losers">
+Recess is for losers</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+June 1st, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>According to the Washington Post, <a href="http://www.washingtonpost.com/wp-dyn/content/article/2006/05/31/AR2006053102208.html">local schools are reducing or eliminating recess</a>, if they haven&#8217;t done so already. However, some are adding it back, but in the most ridiculous forms: </p>
+<blockquote><p>
+In the rush to fight obesity and get kids moving, some schools are adding mandatory activities and exercise time during recess, guided by teachers. They say kids aren&#8217;t as spontaneous as they used to be, perhaps because they spend so much time in front of televisions, computers and video games. So some schools are asking teachers to lead the way three days a week.
+</p></blockquote>
+<p>Methinks some school administrators are a little overeager to show &#8220;results.&#8221;</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Recess is for losers">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to 27 hours on Metro">
+27 hours on Metro</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 25th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>I received this email late in the afternoon:<br />
+</p>
+<blockquote><p>
+A 1632-minute delay is in effect at Stadium-Armory in the direction of Vienna/Fairfax-GMU.  Unsubscribe: wmata.com/opt_out.cfm
+</p></blockquote>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on 27 hours on Metro">2 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Warning: rant">
+Warning: rant</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 23rd, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>Being a civic-minded cheapskate, I check a lot of books out of the library. The current one I&#8217;m reading (<i>Dark Age Ahead</i>, by Jane Jacobs) has been slightly modified by a previous borrower. Observe the following quote:<br />
+</p>
+<blockquote><p>
+Arabic numerals originated in the Fertile Crescent and India; the source of their most original and portentous addition, the zero, was the Fertile Crescent.
+</p></blockquote>
+<p>The words &#8216;in&#8217; and &#8216;India&#8217; were underlined, with the word &#8216;only&#8217; scrawled above &#8216;India&#8217;. To whoever did this: <strong>SHAME ON YOU</strong>. Don&#8217;t write in library books, ever! Rather than correcting a factual error, you&#8217;re only making yourself look like an idiot. You would get your point across much better by writing your own book titled &#8220;Modern Numerals Were Invented in India, Not the Middle East&#8221; instead of defacing public property that will be seen by the half-dozen people borrowing the book after you.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Warning: rant">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to After the flood">
+After the flood</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 22nd, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>On a not quite normal morning, the sun is shining but the atomosphere is still and unusually silent. Inside each house, warped furniture and personal artifacts are bounded only by mold-gripped walls. Everything is covered with an ugly gray-yellow-brown tinge. Must is the only scent that can permeate a protective, stifling mask. After taking a few moments to survey the landscape, the long process begins. </p>
+<p>First come the couches and charis, soaked and wretched. Then come books, videos, and clothing. Old trophies, keepsakes, and treasured items now ruined by the waves of disaster are discovered. Before too long the house is barren, but not empty. Cabinets, sinks, toilets, and tubs are next to go. It&#8217;s now afternoon. Drywall still bearing watermarks is taken out chunk by chunk. Nails are removed, the ceiling is carted away, and the floor is finally swept.</p>
+<p>All that remain are 2&#215;4 studs, a plank floor, the siding, and a fireplace. The house that started the morning full of corrupted goods and possessions is now stripped to the bare fundamental elements. This house is still in no shape to be inhabited, but it now almost feels more like a home. It has been redeemed.</p>
+<p>I don&#8217;t know if anyone will ever be able to move back into the homes I helped gut last month. If anything, I hope whoever sees them will be encouraged, despite the ensuing debate over how to repopulate New Orleans.</p>
+<div align="center"><embed style="width:400px; height:326px;" id="VideoPlayback" align="middle" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?videoUrl=http%3A%2F%2Fvp.video.google.com%2Fvideodownload%3Fversion%3D0%26secureurl%3DwAAAAG7ggqAHSiJjpW0D3w4aYTWGIizjoqCFso_lIEWvv-pBwBbV88gncjl5ywgZNB2oLxJm_aCk4CkHa5KqNc5jkKi_CnjRRJb25AMs_Wj43oW92V2gnjwJffa3hcxkNB7fH5pv-THEyfInJ0FbLd0oZcBKFjpF4P7ffkv5CLVHUSWtorvRcqohEhr_wcXRP761GRYPA8-f23cen4rr192Gqe8hh4gwW5F9TJyChgVedaGa7vXlxWR_32d80Gx6HakcgObwHyVnm34c3rtTq6qq78o%26sigh%3DG_Gq-wh_6nJBhtwKoq8pbmG4NUY%26begin%3D0%26len%3D670003%26docid%3D3287601367966742916&#038;thumbnailUrl=http%3A%2F%2Fvideo.google.com%2FThumbnailServer%3Fapp%3Dvss%26contentid%3Df6814b16d601932b%26second%3D5%26itag%3Dw320%26urlcreated%3D1148243584%26sigh%3DJJC8zTxY_xTuaZUv3_0zsURQsP4&#038;playerId=3287601367966742916" allowScriptAccess="sameDomain" quality="best" bgcolor="#ffffff" scale="noScale" wmode="window" salign="TL"  FlashVars="playerMode=embedded"> </embed></div>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to They&#8217;re in USA Today, but read them anyway">
+They&#8217;re in USA Today, but read them anyway</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 19th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>Yes, I&#8217;ve been reading some &#8220;McPaper&#8221; articles, but these are culture pieces. Residents of <a href="http://www.usatoday.com/life/lifestyle/2006-05-15-blank-calendar_x.htm">Poway, California</a> have decided to cancel everything for next Monday evening. No soccer practice, no church small groups, just time at home with the family. I&#8217;m a fan of anything that gets people to slow down and consider the world around them. </p>
+<p>Also, there&#8217;s an article about the <a href="http://www.usatoday.com/money/industries/food/2006-05-18-starbucks-usat_x.htm">&#8220;Starbuckization of society.&#8221;</a> Highlights on their influence over price, taste (although many would argue Starbucks woefully lacks here), eating habits, choice, socialization, real estate, corporate social responsibilty, and now entertainment.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on They&#8217;re in USA Today, but read them anyway">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Discovering the Septic Tank">
+Discovering the Septic Tank</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 11th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>From the <a href="http://www.washingtonpost.com/wp-dyn/content/article/2006/05/10/AR2006051002360.html">Washington Post</a>:<br />
+</p>
+<blockquote><p>
+&#8220;Looking back, it&#8217;s kind of funny how clueless we were, but, I mean, in the city you just flush,&#8221; said Kelly, who last year became a county commissioner. &#8220;You don&#8217;t think about where it goes.&#8221;
+</p></blockquote>
+<p></p>
+<p>To me, in a possibly strange way, this quote really encapsulates the larger problem we have today with urban development: people don&#8217;t want to think about the impact of their actions. We enjoy living our insular lives, until we end up with a backyard full of our own waste.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Discovering the Septic Tank">2 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to No more carpet for Metro?">
+No more carpet for Metro?</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+May 10th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p><a href="http://www.washingtonpost.com/wp-dyn/content/article/2006/05/09/AR2006050901738.html">Washington Post</a> reports that Metro is thinking about removing the carpeting and padded seats in rail cars, citing the expense of maintenance. If this does happen, I wonder what the effect will be on litter and vandalism. Could the quality of the interior be helping in Metro&#8217;s vigilant crusade against abuse? </p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Jane Jacobs, 1916-2006">
+Jane Jacobs, 1916-2006</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+April 26th, 2006
+</div>
+<div class="art-PostContent">
+
+          <p>Evidently, I&#8217;m a day late on the sad news that Jane Jacobs has <a href="http://www.theglobeandmail.com/servlet/story/RTGAM.20060425.wjanejacobs0425/BNStory/National/home">passed away</a>. I only recently <a href="http://blog.jlleblanc.com/content/view/89/4/">discovered</a> her marvelous book that everone else seems to blatantly copy.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Jane Jacobs, 1916-2006">3 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+
+<div class="art-PostContent">
+
+<div class="navigation">
+	<div class="alignleft"><a href="../18/index.html" >&laquo; Older Entries</a></div>
+	<div class="alignright"><a href="../16/index.html" >Newer Entries &raquo;</a></div>
+</div>
+
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+
+</div>
+<div class="art-sidebar1">      
+<div id="text-3" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://www.lynda.com/JosephLeBlanc" alt="Joomla! tutorials" border="0">Check out my Lynda.com video tutorials on Joomla 1.7 and 1.5!</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-4" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Comment policy</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget">All comments must be on topic. Off-topic comments will be deleted. Please use your real name. Comments coming from the same visitor across multiple posts in a short period of time will be considered spamming.</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Recent Comments</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<ul id="recentcomments"><li class="recentcomments"><a href='http://www.bryantsmith.com/template/' rel='external nofollow' class='url'>CSS Templates</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15462">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15459">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://osiris.samybaxy.net' rel='external nofollow' class='url'>Samybaxy</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15458">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15453">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.FreemanFeedback.com' rel='external nofollow' class='url'>Thomas Freeman</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15452">Joomla&#8217;s True Merit</a></li></ul>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-5" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Coworking at&#8230;</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://hubaustin.com">HubAustin</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="linkcat-2" class="widget widget_links"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Blogroll</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.alledia.com/blog/" rel="acquaintance met">Alledia</a></li>
+<li><a href="http://benramsey.com" rel="acquaintance met">Ben Ramsey</a></li>
+<li><a href="http://brandonsavage.net" rel="colleague">Brandon Savage</a></li>
+<li><a href="http://www.caseysoftware.com/blog" rel="colleague">CaseySoftware</a></li>
+<li><a href="http://shiflett.org/">Chris Shiflett</a></li>
+<li><a href="http://citycomfortsblog.typepad.com/cities/">City Comforts, the blog</a></li>
+<li><a href="http://blog.corywebb.com">Cory Webb</a></li>
+<li><a href="http://www.inshaw.com/blog/">In Shaw</a></li>
+<li><a href="http://www.joelonsoftware.com">Joel on Software</a></li>
+<li><a href="http://www.joomlaperformance.com/home/" rel="acquaintance met">Joomla Performance</a></li>
+<li><a href="http://nataliemlewis.wordpress.com/" rel="friend met colleague" title="Get Free!">Natalie M. Lewis</a></li>
+<li><a href="http://www.picnet.net/blog" rel="colleague">PICnet Blog</a></li>
+<li><a href="http://terrychay.com/blog/">Terry Chay</a></li>
+<li><a href="http://blog.spacemonkeylabs.com/" rel="colleague">The Spacemonkey Chronicles</a></li>
+<li><a href="http://zviband.com/" rel="colleague">Zvi Band</a></li>
+
+	</ul>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>
+<div id="text-1" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><p><a href="http://www.walkscore.com">My Walk Score is 75, what's yours?</a></p></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Tags</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<div class="tagcloud"><a href='../../tag/book/index.html' class='tag-link-114' title='2 topics' style='font-size: 9.9236641221374pt;'>book</a>
+<a href='../../tag/chicago/index.html' class='tag-link-71' title='4 topics' style='font-size: 12.274809160305pt;'>chicago</a>
+<a href='../../tag/css/index.html' class='tag-link-51' title='4 topics' style='font-size: 12.274809160305pt;'>css</a>
+<a href='../../tag/dcphp/index.html' class='tag-link-26' title='8 topics' style='font-size: 14.946564885496pt;'>dcphp</a>
+<a href='../../tag/documentation/index.html' class='tag-link-34' title='3 topics' style='font-size: 11.206106870229pt;'>documentation</a>
+<a href='../../tag/drupal/index.html' class='tag-link-6' title='6 topics' style='font-size: 13.87786259542pt;'>drupal</a>
+<a href='../../tag/events/index.html' class='tag-link-29' title='5 topics' style='font-size: 13.129770992366pt;'>events</a>
+<a href='../../tag/fb/index.html' class='tag-link-137' title='9 topics' style='font-size: 15.480916030534pt;'>fb</a>
+<a href='../../tag/friends/index.html' class='tag-link-128' title='9 topics' style='font-size: 15.480916030534pt;'>friends</a>
+<a href='../../tag/housekeeping/index.html' class='tag-link-3' title='1 topic' style='font-size: 8pt;'>housekeeping</a>
+<a href='../../tag/howtojoomla/index.html' class='tag-link-146' title='3 topics' style='font-size: 11.206106870229pt;'>howtojoomla</a>
+<a href='../../tag/html/index.html' class='tag-link-50' title='4 topics' style='font-size: 12.274809160305pt;'>html</a>
+<a href='../../tag/jab11/index.html' class='tag-link-167' title='2 topics' style='font-size: 9.9236641221374pt;'>jab11</a>
+<a href='../../tag/javascript/index.html' class='tag-link-14' title='4 topics' style='font-size: 12.274809160305pt;'>javascript</a>
+<a href='../../tag/joomla/index.html' class='tag-link-8' title='40 topics' style='font-size: 22pt;'>joomla</a>
+<a href='../../tag/joomla-15/index.html' class='tag-link-31' title='12 topics' style='font-size: 16.656488549618pt;'>Joomla 1.5</a>
+<a href='../../tag/joomladay/index.html' class='tag-link-153' title='2 topics' style='font-size: 9.9236641221374pt;'>joomladay</a>
+<a href='../../tag/joomlaexpo/index.html' class='tag-link-70' title='5 topics' style='font-size: 13.129770992366pt;'>joomlaexpo</a>
+<a href='../../tag/jquery/index.html' class='tag-link-13' title='4 topics' style='font-size: 12.274809160305pt;'>jquery</a>
+<a href='../../tag/lyndacom/index.html' class='tag-link-106' title='3 topics' style='font-size: 11.206106870229pt;'>lynda.com</a>
+<a href='../../tag/missions/index.html' class='tag-link-142' title='7 topics' style='font-size: 14.412213740458pt;'>missions</a>
+<a href='../../tag/mootools/index.html' class='tag-link-119' title='2 topics' style='font-size: 9.9236641221374pt;'>mootools</a>
+<a href='../../tag/mvc/index.html' class='tag-link-120' title='2 topics' style='font-size: 9.9236641221374pt;'>mvc</a>
+<a href='../../tag/philippines/index.html' class='tag-link-141' title='8 topics' style='font-size: 14.946564885496pt;'>philippines</a>
+<a href='../../tag/php/index.html' class='tag-link-4' title='13 topics' style='font-size: 17.083969465649pt;'>php</a>
+<a href='../../tag/php-appalachia/index.html' class='tag-link-64' title='2 topics' style='font-size: 9.9236641221374pt;'>php appalachia</a>
+<a href='../../tag/phptek/index.html' class='tag-link-127' title='2 topics' style='font-size: 9.9236641221374pt;'>phptek</a>
+<a href='../../tag/podcast-suite/index.html' class='tag-link-55' title='7 topics' style='font-size: 14.412213740458pt;'>podcast suite</a>
+<a href='../../tag/products/index.html' class='tag-link-59' title='2 topics' style='font-size: 9.9236641221374pt;'>products</a>
+<a href='../../tag/programming/index.html' class='tag-link-61' title='2 topics' style='font-size: 9.9236641221374pt;'>programming</a>
+<a href='../../tag/security/index.html' class='tag-link-9' title='4 topics' style='font-size: 12.274809160305pt;'>security</a>
+<a href='../../tag/seo/index.html' class='tag-link-72' title='3 topics' style='font-size: 11.206106870229pt;'>seo</a>
+<a href='../../tag/skype/index.html' class='tag-link-84' title='2 topics' style='font-size: 9.9236641221374pt;'>skype</a>
+<a href='../../tag/software-business/index.html' class='tag-link-57' title='2 topics' style='font-size: 9.9236641221374pt;'>software business</a>
+<a href='../../tag/templates/index.html' class='tag-link-122' title='2 topics' style='font-size: 9.9236641221374pt;'>templates</a>
+<a href='../../tag/templating/index.html' class='tag-link-47' title='3 topics' style='font-size: 11.206106870229pt;'>templating</a>
+<a href='../../tag/theming/index.html' class='tag-link-46' title='2 topics' style='font-size: 9.9236641221374pt;'>theming</a>
+<a href='../../tag/timothy-internship-program/index.html' class='tag-link-164' title='6 topics' style='font-size: 13.87786259542pt;'>timothy internship program</a>
+<a href='../../tag/training/index.html' class='tag-link-74' title='2 topics' style='font-size: 9.9236641221374pt;'>training</a>
+<a href='../../tag/twitter/index.html' class='tag-link-81' title='3 topics' style='font-size: 11.206106870229pt;'>twitter</a>
+<a href='../../tag/validation/index.html' class='tag-link-52' title='2 topics' style='font-size: 9.9236641221374pt;'>validation</a>
+<a href='../../tag/video/index.html' class='tag-link-107' title='3 topics' style='font-size: 11.206106870229pt;'>video</a>
+<a href='../../tag/washington-dc/index.html' class='tag-link-28' title='5 topics' style='font-size: 13.129770992366pt;'>washington dc</a>
+<a href='../../tag/widget-devcamp/index.html' class='tag-link-25' title='2 topics' style='font-size: 9.9236641221374pt;'>widget devcamp</a>
+<a href='../../tag/wordpress/index.html' class='tag-link-7' title='6 topics' style='font-size: 13.87786259542pt;'>wordpress</a></div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-2" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><div id="twitter_div">
+<h2 class="twitter-title">Twitter Updates</h2>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/jlleblanc.json?callback=twitterCallback2&count=5"></script>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-7" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array' title='JavaScript Array .every'><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JavaScript Array .every'/></a>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div></div>
+</div>
+<div class="cleared"></div>
+
+<div class="art-Footer">
+    <div class="art-Footer-inner">
+                <a href="../../feed/index.html" class="art-rss-tag-icon" title="RSS"></a>
+                <div class="art-Footer-text">
+<p>
+<a href='index.html#'>Contact Us</a> | <a href='index.html#'>Terms of Use</a> | <a href='index.html#'>Trademarks</a> | <a href='index.html#'>Privacy Statement</a><br />Copyright &copy; 2009 Design vs. Develop. All Rights Reserved.</p>
+</div>
+    </div>
+    <div class="art-Footer-background">
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+</div>
+
+<!-- 19 queries. 0.446 seconds. -->
+<div></div>
+</body>
+<script type="text/javascript">
+var woopra_id = '3034226658';
+</script>
+<script src="http://static.woopra.com/js/woopra.js"></script>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Design vs. Develop</title>
+<script type="text/javascript" src="../../wp-content/themes/DesignVsDevelop/script.js"></script>
+<link rel="stylesheet" href="../../wp-content/themes/DesignVsDevelop/style.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Design vs. Develop RSS Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/atom+xml" title="Design vs. Develop Atom Feed" href="../../feed/atom/index.html" /> 
+<link rel="pingback" href="../../xmlrpc.php" />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js%3Fver=1.11.0'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+<link href="../../wp-content/plugins/spam-stopper/spam-stopper.css" rel="stylesheet" type="text/css" />			<script type="text/javascript">
+			/* <![CDATA[ */
+				if (typeof jQuery == 'undefined') {  
+	   				 // jQuery is not loaded  
+				} else {
+					jQuery(function(){
+						jQuery('#commentform').submit(function(){
+								if (jQuery('#author').val()=="") {
+									alert("Please input your name");
+									return false;     		
+								}
+								var email_field = jQuery('#email');
+								var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+								if (!emailFilter.test(email_field.val())) {
+									alert("Please input a valid email");
+									return false;
+								}
+								if (jQuery('#spamq').val()=="") {
+									alert("Please answer the anti-spam question");
+									return false;
+								}
+								if (jQuery('#comment').val()=="") {
+									alert("Please input a comment");
+									return false;
+								}
+								var spamq = jQuery('#spamq').val();			
+								if (spamq.toUpperCase()!=='HOT') {
+									alert("Incorrect anti-spam answer. Please re-answer the question! The correct answer is \"Hot\"");
+									return false;
+								}
+								return true;
+						});
+					});
+				}
+			/* ]]> */
+			</script>
+				<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<div id="art-page-background-simple-gradient">
+</div>
+<div id="art-main">
+<div class="art-Sheet">
+    <div class="art-Sheet-tl"></div>
+    <div class="art-Sheet-tr"></div>
+    <div class="art-Sheet-bl"></div>
+    <div class="art-Sheet-br"></div>
+    <div class="art-Sheet-tc"></div>
+    <div class="art-Sheet-bc"></div>
+    <div class="art-Sheet-cl"></div>
+    <div class="art-Sheet-cr"></div>
+    <div class="art-Sheet-cc"></div>
+    <div class="art-Sheet-body">
+<div class="art-Header">
+    <div class="art-Header-jpeg"></div>
+
+</div>
+<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+		<li><a class="active" href="../../index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="page_item page-item-234"><a href="../../about/index.html"><span class="l"></span><span class="r"></span><span class="t">About</span></a></li>
+	</ul>
+</div>
+<div class="art-contentLayout">
+<div class="art-content">
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../widget-devcamp-wrapup/index.html" rel="bookmark" title="Permanent Link to Widget DevCamp Wrapup">
+Widget DevCamp Wrapup</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 29th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>Quick highlights from <a href="http://widgetdevcamp-dc.org/">Widget DevCamp DC</a> this past weekend:</p>
+<ul>
+<li><a href="http://zviband.com/">Zvi Band</a> did a presentation on creating Facebook Applications. When he was finished with his presentation, he created a Facebook App from scratch in PHP and FBML! It gave me a few ideas that I probably won&#8217;t get around to doing for a few months.</li>
+<li>We had a roundtable discussion on making money with widgets. Some people proposed including Google ads, but others mentioned that this strategy tends not to work so well for such a small content set. It seems that the most viable route for &#8220;business widgets&#8221; is to use them for brand reinforcement.</li>
+<li><a href="http://wendefer.blogspot.com/">Alex Eagle</a> demoed an application (based on Metro&#8217;s <a href="http://www.wmata.com">website</a>) he wrote for Google&#8217;s <a href="http://code.google.com/android/">Android</a> project during DevCamp. While there aren&#8217;t any Andriod capable phones out yet, Google has the dev environment available with a phone emulator. There&#8217;s built in support for GPS, if you have a capable device. Looks very promising, but what will Apple&#8217;s iPhone kit offer? We shall see&#8230;</li>
+</ul>
+<p>Overall, Widget DevCamp was much more relaxed and open ended than last summer&#8217;s BarCamp. We had a smaller crowd and more flexible schedule. I personally think we could have done the session planning on the same day: we did this during a Friday evening happy hour instead. The time constraints of doing everything on the same day keep things moving and prevent talks from dragging too long. However, I definitely enjoyed it and I&#8217;m looking forward to the next camp hitting DC: <a href="http://barcamp.org/eDemocracyCamp">eDemocracyCamp</a>.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/android/index.html" rel="tag">android</a>, <a href="../../tag/edemocracycamp/index.html" rel="tag">edemocracycamp</a>, <a href="../../tag/facebook/index.html" rel="tag">facebook</a>, <a href="../../tag/fbml/index.html" rel="tag">fbml</a>, <a href="../../tag/php/index.html" rel="tag">php</a>, <a href="../../tag/washington-dc/index.html" rel="tag">washington dc</a>, <a href="../../tag/widget-devcamp/index.html" rel="tag">widget devcamp</a>  | <a href="../../widget-devcamp-wrapup/index.html#comments" title="Comment on Widget DevCamp Wrapup">3 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../wheres-the-evidence-at-tysons/index.html" rel="bookmark" title="Permanent Link to Where&#8217;s the evidence at Tysons?">
+Where&#8217;s the evidence at Tysons?</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 22nd, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>From a Washington Post <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/01/16/AR2008011604242.html?wpisrc=rss_metro">article</a> last week:</p>
+<blockquote><p> The outcome also would scuttle years of effort by local officials and developers to transform Tysons Corner, Virginia&#8217;s most concentrated jobs center, from a sprawling suburban office park to a Metro-accessible downtown.</p></blockquote>
+<p>I&#8217;ve only been in the DC area for three years now. Can someone point me to physical evidence of these &#8220;years of effort&#8221; to turn Tysons into a &#8220;downtown?&#8221; Is there any at all? The physical design of Tysons could be changed to improve walking safety and shorten blocks. This wouldn&#8217;t be cheap or trivial, but it would certainly be less expensive than five billion dollars. Regardless of whether the area gets Metro service, the design of the area could be redone now without federal money. Throwing a Metro line down Route 7 will not automagically transform Tysons into an urban core.</p>
+<p>Disturbingly, the artist rendering in the article depicts a station that would be too far of a walk from most of the current office buildings.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../25-years-in-the-making-now-available/index.html" rel="bookmark" title="Permanent Link to 2.5 years in the making&#8230; now available!">
+2.5 years in the making&#8230; now available!</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 22nd, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>After 2.5 years of development, Joomla! 1.5 is now available for <a href="http://joomlacode.org/gf/project/joomla/frs/?action=FrsReleaseBrowse&amp;frs_package_id=2">download</a>! Here are some of the new features:</p>
+<ul>
+<li>Beautiful SEF links based on your menu structure.</li>
+<li>FTP layer for installing third-party extensions: leave your directory permissions alone.</li>
+<li>Advanced Javascript-driven interfaces that clean up the administrator workflow.</li>
+<li>Better caching and lazy loading for better performance.</li>
+<li>Compatibility layer for older Joomla! extensions.</li>
+</ul>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/download/index.html" rel="tag">download</a>, <a href="../../tag/joomla-15/index.html" rel="tag">Joomla 1.5</a>  | <a href="../../25-years-in-the-making-now-available/index.html#comments" title="Comment on 2.5 years in the making&#8230; now available!">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../come-and-write-your-documentation/index.html" rel="bookmark" title="Permanent Link to Come and write your documentation!">
+Come and write your documentation!</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 19th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p><a href="http://docs.joomla.org/Joomla%21_Doc_Camp">Joomla! Doc Camp</a> is going well so far. I copied over my <a href="http://docs.joomla.org/Accessing_the_current_user_object">JUser</a> tutorial (original with component download is available <a href="http://www.jlleblanc.com/blogcategory/0/">here</a>) and created some <a href="http://docs.joomla.org/How_to_use_the_JTable_class">JTable</a> documentation from scratch. We still need people to document not only the code, but also the admin interface. Come on over and join in, we&#8217;re going through Monday!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/documentation/index.html" rel="tag">documentation</a>, <a href="../../tag/joomla/index.html" rel="tag">joomla</a>, <a href="../../tag/joomla-doc-camp/index.html" rel="tag">Joomla! Doc Camp</a>, <a href="../../tag/jtable/index.html" rel="tag">JTable</a>, <a href="../../tag/juser/index.html" rel="tag">Juser</a>  | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../solarflare-template-migrated-to-joomla-15/index.html" rel="bookmark" title="Permanent Link to Solarflare template migrated to Joomla! 1.5">
+Solarflare template migrated to Joomla! 1.5</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 18th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>For those of you who are thinking of upgrading to the coming release of Joomla! 1.5 but are deterred due to the absence of the Solarflare template, your excuse is now bunk. <a href="http://www.hrpr.com/">HarryB</a> has <a href="http://www.hrpr.com/cms/index.php?option=com_docman&amp;task=cat_view&amp;gid=75&amp;Itemid=167">ported</a> the infamous template for native use in Joomla! 1.5 (no legacy mode). <a href="http://rc.hrpr.com/trunk/">Here&#8217;s the live demo</a>. And in contrast to other modifications to Solarflare that attempt to hide the fact that they&#8217;re really just Solarflare with a different banner, this one proudly proclaims it:</p>
+<address>This is the Classic RHUK Solarflare II Template</address>
+<address>Modified by HarryB for compatibility with Joomla! 1.5 running in native mode</address>
+<p>(Thanks to <a href="http://opensourcecommunity.org/2008/01/18/harryb-converts-rhuk-solarflare-joomla%21-v-1.5">OpenSourceCommunity</a> for the tip!)</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/harryb/index.html" rel="tag">HarryB</a>, <a href="../../tag/joomla-15/index.html" rel="tag">Joomla 1.5</a>, <a href="../../tag/opensourcecommunity/index.html" rel="tag">opensourcecommunity</a>, <a href="../../tag/solarflare/index.html" rel="tag">Solarflare</a>  | <a href="../../solarflare-template-migrated-to-joomla-15/index.html#comments" title="Comment on Solarflare template migrated to Joomla! 1.5">3 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../january-february-2008-meetings/index.html" rel="bookmark" title="Permanent Link to January-February 2008 meetings">
+January-February 2008 meetings</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 15th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>Tech events in DC for 2008 are getting off to a fast start. First, there&#8217;s <a href="http://widgetdevcamp-dc.org/">Widget DevCamp DC</a> on January 25th (Friday evening) and 26th (all day Saturday). <a href="http://barcampdc.org">BarCamp DC</a> was a great time last Fall where lots of web/programming techniques were shared. Widget DevCamp hints that there may be some actual coding going on! (of course, this depends on who shows up and what ideas are kicked around).</p>
+<p>The regular <a href="http://phpdc.org/">DC PHP Developer&#8217;s group</a> is scheduled to meet on February 13th. This will blow away all other tech events for the year, because we will be having a face-to-face text editor war! I&#8217;m so psyched! Go <a href="http://macromates.com">Textmate</a>!</p>
+<p>Finally, Web Content Mavens will be having an <a href="http://webcms.meetup.com/39/calendar/7089391/">Open Source Content Management System</a> discussion on February 27th. I&#8217;ll be representing <a href="http://www.joomla.org">Joomla!</a>, <a href="http://www.caseysoftware.com">Keith Casey</a> will talk about <a href="http://www.drupal.org">Drupal</a>, and other people will talk about Alfresco, WordPress, and Textpattern.</p>
+<p>See you at all of these events!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/barcamp/index.html" rel="tag">barcamp</a>, <a href="../../tag/cms/index.html" rel="tag">cms</a>, <a href="../../tag/dcphp/index.html" rel="tag">dcphp</a>, <a href="../../tag/drupal/index.html" rel="tag">drupal</a>, <a href="../../tag/events/index.html" rel="tag">events</a>, <a href="../../tag/joomla/index.html" rel="tag">joomla</a>, <a href="../../tag/washington-dc/index.html" rel="tag">washington dc</a>, <a href="../../tag/widget-devcamp/index.html" rel="tag">widget devcamp</a>  | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../still-trying-to-put-down-the-electric-cars/index.html" rel="bookmark" title="Permanent Link to Still trying to put down the electric cars">
+Still trying to put down the electric cars</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 14th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>While reading a Washington Post <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/01/11/AR2008011101998.html?hpid=opinionsbox1">article</a> about the debut of Tata Motors $2,500 car, I ran across this boilerplate quote about the &#8220;problem&#8221; with electric cars:</p>
+<blockquote><p>Others tout plug-in-and-go electric cars. True, they produce no carbon, but if the source of the electricity used to power the car is coal &#8212; the most common source of electricity in the United States and the preferred fuel for the scores of new plants being built in China and India &#8212; then the electric car won&#8217;t save us.</p></blockquote>
+<p>I find this line of thinking to be irritating. The whole advantage of an electric car is that you can change the ultimate fuel source with no modifications to the car itself. I can put up a wind turbine in the backyard and charge it off that. Same with solar panels. Or cow poop. When we find better fuel sources, drivers won&#8217;t have to throw out their old cars to take advantage of them. Moving to electric cars means we&#8217;re trying to solve an energy problem instead of both a car problem and an energy problem.</p>
+<p>The rest of the article drones on about how Detroit is in trouble and how these $2,500 cars will only be affordable for a tiny sliver of India; never mind that at the end of the day, more Indians will have cars, meaning access to more opportunities.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/boilerplate-quotes/index.html" rel="tag">boilerplate quotes</a>, <a href="../../tag/electric-cars/index.html" rel="tag">electric cars</a>, <a href="../../tag/india/index.html" rel="tag">india</a>, <a href="../../tag/tata-motors/index.html" rel="tag">tata motors</a>  | <a href="../../still-trying-to-put-down-the-electric-cars/index.html#comments" title="Comment on Still trying to put down the electric cars">3 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../some-software-ive-been-using-recently/index.html" rel="bookmark" title="Permanent Link to Some software I&#8217;ve been using recently">
+Some software I&#8217;ve been using recently</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 8th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p><strong>Flot</strong> &#8211; Want to build dynamic graphs without using Flash? <a href="http://code.google.com/p/flot/">Flot</a> is ready. It&#8217;s lightweight and pretty quick to pick up. I&#8217;m using it for a project where people can add and remove as many data series as they wish. Throw in some JSON calls and the results are pretty impressive. Although I can&#8217;t show off that project here, take a look at some of the posted <a href="http://people.iola.dk/olau/flot/examples/">examples</a>. It&#8217;s based on <a href="http://www.jquery.com">jQuery</a> and produced by a Danish <a href="http://www.iola.dk/english.html">firm</a>.</p>
+<p><strong>MacFUSE and SSHFS</strong> &#8211; One of the biggest problems I&#8217;ve run into with using Macs is that Finder cannot mount FTP and SFTP sites as writable volumes. While you can get clients like <a href="http://cyberduck.ch/">CyberDuck</a> that will allow you to do transfers, editing the files for an entire website this way can be tedious. Using <a href="http://code.google.com/p/macfuse/">MacFUSE and SSHFS</a> together can get around this limitation. SSHFS is still in a very early release and I did run into some stability issues when mounted all day long, but the core functionality is there.</p>
+<p><strong>Selenium IDE</strong> &#8211; Testing and debugging web interfaces has always been a bit of a pain, but <a href="http://www.openqa.org/selenium-ide/">Selenium IDE</a> can make the process much, much faster. Open up the IDE, click record, then start filling out forms and clicking on elements. Then you can save your test and reopen it later to run it whenever you wish. I did run into a few issues where Javascript generated DOM elements confused the debugger (might be a timing issue), but overall it is a very powerful and easy to use Firefox extension. You can also use <a href="http://www.openqa.org/selenium-core/">Selenium Core</a> on other browsers. I haven&#8217;t tried this, but it appears that you can record the test using the IDE in Firefox, then use that same test with Core with the other browsers. Thanks to <a href="http://www.laurathomson.com/">Laura Thomson</a> for mentioning this one at the <a href="http://dcphpconference.com">DC PHP Conference</a> this past fall.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/cyberduck/index.html" rel="tag">cyberduck</a>, <a href="../../tag/flot/index.html" rel="tag">flot</a>, <a href="../../tag/javascript/index.html" rel="tag">javascript</a>, <a href="../../tag/jquery/index.html" rel="tag">jquery</a>, <a href="../../tag/mac/index.html" rel="tag">mac</a>, <a href="../../tag/macfuse/index.html" rel="tag">macfuse</a>, <a href="../../tag/selenium/index.html" rel="tag">Selenium</a>, <a href="../../tag/sshfs/index.html" rel="tag">sshfs</a>  | <a href="../../some-software-ive-been-using-recently/index.html#comments" title="Comment on Some software I&#8217;ve been using recently">2 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../whygosolo-launched/index.html" rel="bookmark" title="Permanent Link to WhyGoSolo &#8211; launched">
+WhyGoSolo &#8211; launched</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 6th, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>A different kind of social networking site was released yesterday: <a href="http://www.whygosolo.com">WhyGoSolo</a>. Most social networking sites are focused on building an online community out of your friends. In contrast, WhyGoSolo is designed to help you find people with similar interests so that you can do things <em>offline</em>. Sign up for <a href="http://www.whygosolo.com">an invite</a> and take a look around!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/social-networking/index.html" rel="tag">social networking</a>, <a href="../../tag/whygosolo/index.html" rel="tag">whygosolo</a>  | <a href="../../whygosolo-launched/index.html#comments" title="Comment on WhyGoSolo &#8211; launched">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../a-website-resolution-you-can-keep/index.html" rel="bookmark" title="Permanent Link to A website resolution you can keep">
+A website resolution you can keep</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+January 2nd, 2008
+</div>
+<div class="art-PostContent">
+
+          <p>If you run a website, here&#8217;s a resolution you can keep: make sure your host is up to date. This is something that only takes a few minutes to check and can help you avoid hacker-induced headaches. With PHP being the most popular programming language used on the web, chances are your site uses it. You&#8217;re definitely using PHP if you use popular programs such as <a href="http://www.joomla.org">Joomla!</a>, <a href="http://www.drupal.org">Drupal</a>, or <a href="http://www.wordpress.org">WordPress</a>. Even if you keep these programs up to date with the latest patches, your site can still be at risk if your host doesn&#8217;t keep PHP itself updated.</p>
+<p>If you&#8217;re running Joomla! or Drupal, checking your current PHP version is easy. In Joomla! 1.0.x, log into the administrator backend and go to System &gt; System Info. The PHP version will be listed on this screen as well as under the PHP Info tab. In Drupal, use your admin login, then go to Administer &gt; Logs &gt; Status Report.</p>
+<p>Aside from this software, there are other ways you can get the PHP version number. Most shared hosts often give you a control panel where you can log in and manage your account. If your host offers CPanel, the PHP version number will usually be displayed on the front page in the left column.</p>
+<p>As a last resort, it&#8217;s easy to create a phpinfo() page you can use to get the version information. Open up a plain-text editor such as Notepad or TextEdit and add the following code:</p>
+<pre>&lt;?php</pre>
+<pre>phpinfo();
+
+?&gt;</pre>
+<p>Save this file as version.php (or anythingyouwant.php) and upload it to your web server using FTP to you web root directory. Then go to http://www.yoursite.com/version.php. Delete version.php from your server right away: you just want it to be available for a moment so you can get the information.</p>
+<p>You now have your PHP version number. <strong>So now what?</strong></p>
+<p>As of this writing, the current version of PHP is 5.2.5. If this is the version you have, congratulations! Your host is up to date with the latest stable copy of PHP there is. If you have a version of PHP that starts with 5 but isn&#8217;t the latest, check with your host to see if they&#8217;re in transition. A lot of hosts set aside some servers with PHP 5 when it first came out in July of 2004 for testing purposes. You might be on one of these servers.</p>
+<p>If your PHP version is <strike>4.4.7</strike>4.4.8, your host has the latest stable version of PHP 4. Ask and see if they have a plan in place for upgrading your account to PHP 5. If your host is running a version of PHP earlier than 4.4.7, <strong>look for a new hosting provider immediately</strong>: your host is <em>at least</em> 7 months behind in applying security patches. Don&#8217;t count on them keeping you up to date in the future, they&#8217;ve already failed you.</p>
+<p>As of this past Monday, no new versions of PHP 4 will be released and it is officially obsolete. On August 8th, the PHP team will not even release security updates for version 4.</p>
+<p><strong>UPDATE</strong>: the PHP team released 4.4.8 the day after I posted this. The switch from .7 to .8 represents some security patches. It is not considered an entirely new version of PHP; everything should still be backwards compatible. If you are running 4.x.x, make sure your host upgrades you 4.4.8 promptly.</p>
+<p>Aside from keeping up to date with software that&#8217;s being actively developed, there are other reasons to move to PHP 5. It performs faster and has new features your friendly open source programmers desperately want to use. The Joomla!, Drupal, and WordPress teams have all avoided writing code that only works on PHP 5 to make sure that you can run their software. Now is the time to return the favor and go with PHP 5!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in <a href="../../category/uncategorized/index.html" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> | Tags: <a href="../../tag/drupal/index.html" rel="tag">drupal</a>, <a href="../../tag/joomla/index.html" rel="tag">joomla</a>, <a href="../../tag/php/index.html" rel="tag">php</a>, <a href="../../tag/security/index.html" rel="tag">security</a>, <a href="../../tag/websites/index.html" rel="tag">websites</a>, <a href="../../tag/wordpress/index.html" rel="tag">wordpress</a>  | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+
+<div class="art-PostContent">
+
+<div class="navigation">
+	<div class="alignleft"><a href="../9/index.html" >&laquo; Older Entries</a></div>
+	<div class="alignright"><a href="../7/index.html" >Newer Entries &raquo;</a></div>
+</div>
+
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+
+</div>
+<div class="art-sidebar1">      
+<div id="text-3" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://www.lynda.com/JosephLeBlanc" alt="Joomla! tutorials" border="0">Check out my Lynda.com video tutorials on Joomla 1.7 and 1.5!</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-4" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Comment policy</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget">All comments must be on topic. Off-topic comments will be deleted. Please use your real name. Comments coming from the same visitor across multiple posts in a short period of time will be considered spamming.</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Recent Comments</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<ul id="recentcomments"><li class="recentcomments"><a href='http://www.bryantsmith.com/template/' rel='external nofollow' class='url'>CSS Templates</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15462">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15459">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://osiris.samybaxy.net' rel='external nofollow' class='url'>Samybaxy</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15458">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15453">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.FreemanFeedback.com' rel='external nofollow' class='url'>Thomas Freeman</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15452">Joomla&#8217;s True Merit</a></li></ul>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-5" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Coworking at&#8230;</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://hubaustin.com">HubAustin</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="linkcat-2" class="widget widget_links"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Blogroll</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.alledia.com/blog/" rel="acquaintance met">Alledia</a></li>
+<li><a href="http://benramsey.com" rel="acquaintance met">Ben Ramsey</a></li>
+<li><a href="http://brandonsavage.net" rel="colleague">Brandon Savage</a></li>
+<li><a href="http://www.caseysoftware.com/blog" rel="colleague">CaseySoftware</a></li>
+<li><a href="http://shiflett.org/">Chris Shiflett</a></li>
+<li><a href="http://citycomfortsblog.typepad.com/cities/">City Comforts, the blog</a></li>
+<li><a href="http://blog.corywebb.com">Cory Webb</a></li>
+<li><a href="http://www.inshaw.com/blog/">In Shaw</a></li>
+<li><a href="http://www.joelonsoftware.com">Joel on Software</a></li>
+<li><a href="http://www.joomlaperformance.com/home/" rel="acquaintance met">Joomla Performance</a></li>
+<li><a href="http://nataliemlewis.wordpress.com/" rel="friend met colleague" title="Get Free!">Natalie M. Lewis</a></li>
+<li><a href="http://www.picnet.net/blog" rel="colleague">PICnet Blog</a></li>
+<li><a href="http://terrychay.com/blog/">Terry Chay</a></li>
+<li><a href="http://blog.spacemonkeylabs.com/" rel="colleague">The Spacemonkey Chronicles</a></li>
+<li><a href="http://zviband.com/" rel="colleague">Zvi Band</a></li>
+
+	</ul>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>
+<div id="text-1" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><p><a href="http://www.walkscore.com">My Walk Score is 75, what's yours?</a></p></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Tags</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<div class="tagcloud"><a href='../../tag/book/index.html' class='tag-link-114' title='2 topics' style='font-size: 9.9236641221374pt;'>book</a>
+<a href='../../tag/chicago/index.html' class='tag-link-71' title='4 topics' style='font-size: 12.274809160305pt;'>chicago</a>
+<a href='../../tag/css/index.html' class='tag-link-51' title='4 topics' style='font-size: 12.274809160305pt;'>css</a>
+<a href='../../tag/dcphp/index.html' class='tag-link-26' title='8 topics' style='font-size: 14.946564885496pt;'>dcphp</a>
+<a href='../../tag/documentation/index.html' class='tag-link-34' title='3 topics' style='font-size: 11.206106870229pt;'>documentation</a>
+<a href='../../tag/drupal/index.html' class='tag-link-6' title='6 topics' style='font-size: 13.87786259542pt;'>drupal</a>
+<a href='../../tag/events/index.html' class='tag-link-29' title='5 topics' style='font-size: 13.129770992366pt;'>events</a>
+<a href='../../tag/fb/index.html' class='tag-link-137' title='9 topics' style='font-size: 15.480916030534pt;'>fb</a>
+<a href='../../tag/friends/index.html' class='tag-link-128' title='9 topics' style='font-size: 15.480916030534pt;'>friends</a>
+<a href='../../tag/housekeeping/index.html' class='tag-link-3' title='1 topic' style='font-size: 8pt;'>housekeeping</a>
+<a href='../../tag/howtojoomla/index.html' class='tag-link-146' title='3 topics' style='font-size: 11.206106870229pt;'>howtojoomla</a>
+<a href='../../tag/html/index.html' class='tag-link-50' title='4 topics' style='font-size: 12.274809160305pt;'>html</a>
+<a href='../../tag/jab11/index.html' class='tag-link-167' title='2 topics' style='font-size: 9.9236641221374pt;'>jab11</a>
+<a href='../../tag/javascript/index.html' class='tag-link-14' title='4 topics' style='font-size: 12.274809160305pt;'>javascript</a>
+<a href='../../tag/joomla/index.html' class='tag-link-8' title='40 topics' style='font-size: 22pt;'>joomla</a>
+<a href='../../tag/joomla-15/index.html' class='tag-link-31' title='12 topics' style='font-size: 16.656488549618pt;'>Joomla 1.5</a>
+<a href='../../tag/joomladay/index.html' class='tag-link-153' title='2 topics' style='font-size: 9.9236641221374pt;'>joomladay</a>
+<a href='../../tag/joomlaexpo/index.html' class='tag-link-70' title='5 topics' style='font-size: 13.129770992366pt;'>joomlaexpo</a>
+<a href='../../tag/jquery/index.html' class='tag-link-13' title='4 topics' style='font-size: 12.274809160305pt;'>jquery</a>
+<a href='../../tag/lyndacom/index.html' class='tag-link-106' title='3 topics' style='font-size: 11.206106870229pt;'>lynda.com</a>
+<a href='../../tag/missions/index.html' class='tag-link-142' title='7 topics' style='font-size: 14.412213740458pt;'>missions</a>
+<a href='../../tag/mootools/index.html' class='tag-link-119' title='2 topics' style='font-size: 9.9236641221374pt;'>mootools</a>
+<a href='../../tag/mvc/index.html' class='tag-link-120' title='2 topics' style='font-size: 9.9236641221374pt;'>mvc</a>
+<a href='../../tag/philippines/index.html' class='tag-link-141' title='8 topics' style='font-size: 14.946564885496pt;'>philippines</a>
+<a href='../../tag/php/index.html' class='tag-link-4' title='13 topics' style='font-size: 17.083969465649pt;'>php</a>
+<a href='../../tag/php-appalachia/index.html' class='tag-link-64' title='2 topics' style='font-size: 9.9236641221374pt;'>php appalachia</a>
+<a href='../../tag/phptek/index.html' class='tag-link-127' title='2 topics' style='font-size: 9.9236641221374pt;'>phptek</a>
+<a href='../../tag/podcast-suite/index.html' class='tag-link-55' title='7 topics' style='font-size: 14.412213740458pt;'>podcast suite</a>
+<a href='../../tag/products/index.html' class='tag-link-59' title='2 topics' style='font-size: 9.9236641221374pt;'>products</a>
+<a href='../../tag/programming/index.html' class='tag-link-61' title='2 topics' style='font-size: 9.9236641221374pt;'>programming</a>
+<a href='../../tag/security/index.html' class='tag-link-9' title='4 topics' style='font-size: 12.274809160305pt;'>security</a>
+<a href='../../tag/seo/index.html' class='tag-link-72' title='3 topics' style='font-size: 11.206106870229pt;'>seo</a>
+<a href='../../tag/skype/index.html' class='tag-link-84' title='2 topics' style='font-size: 9.9236641221374pt;'>skype</a>
+<a href='../../tag/software-business/index.html' class='tag-link-57' title='2 topics' style='font-size: 9.9236641221374pt;'>software business</a>
+<a href='../../tag/templates/index.html' class='tag-link-122' title='2 topics' style='font-size: 9.9236641221374pt;'>templates</a>
+<a href='../../tag/templating/index.html' class='tag-link-47' title='3 topics' style='font-size: 11.206106870229pt;'>templating</a>
+<a href='../../tag/theming/index.html' class='tag-link-46' title='2 topics' style='font-size: 9.9236641221374pt;'>theming</a>
+<a href='../../tag/timothy-internship-program/index.html' class='tag-link-164' title='6 topics' style='font-size: 13.87786259542pt;'>timothy internship program</a>
+<a href='../../tag/training/index.html' class='tag-link-74' title='2 topics' style='font-size: 9.9236641221374pt;'>training</a>
+<a href='../../tag/twitter/index.html' class='tag-link-81' title='3 topics' style='font-size: 11.206106870229pt;'>twitter</a>
+<a href='../../tag/validation/index.html' class='tag-link-52' title='2 topics' style='font-size: 9.9236641221374pt;'>validation</a>
+<a href='../../tag/video/index.html' class='tag-link-107' title='3 topics' style='font-size: 11.206106870229pt;'>video</a>
+<a href='../../tag/washington-dc/index.html' class='tag-link-28' title='5 topics' style='font-size: 13.129770992366pt;'>washington dc</a>
+<a href='../../tag/widget-devcamp/index.html' class='tag-link-25' title='2 topics' style='font-size: 9.9236641221374pt;'>widget devcamp</a>
+<a href='../../tag/wordpress/index.html' class='tag-link-7' title='6 topics' style='font-size: 13.87786259542pt;'>wordpress</a></div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-2" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><div id="twitter_div">
+<h2 class="twitter-title">Twitter Updates</h2>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/jlleblanc.json?callback=twitterCallback2&count=5"></script>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-7" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array' title='JavaScript Array .every'><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JavaScript Array .every'/></a>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div></div>
+</div>
+<div class="cleared"></div>
+
+<div class="art-Footer">
+    <div class="art-Footer-inner">
+                <a href="../../feed/index.html" class="art-rss-tag-icon" title="RSS"></a>
+                <div class="art-Footer-text">
+<p>
+<a href='index.html#'>Contact Us</a> | <a href='index.html#'>Terms of Use</a> | <a href='index.html#'>Trademarks</a> | <a href='index.html#'>Privacy Statement</a><br />Copyright &copy; 2009 Design vs. Develop. All Rights Reserved.</p>
+</div>
+    </div>
+    <div class="art-Footer-background">
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+</div>
+
+<!-- 21 queries. 0.543 seconds. -->
+<div></div>
+</body>
+<script type="text/javascript">
+var woopra_id = '3034226658';
+</script>
+<script src="http://static.woopra.com/js/woopra.js"></script>
+</html>

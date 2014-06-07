@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design vs. Develop &#187; concrete5</title>
+	<atom:link href="http://www.designvsdevelop.com/tag/concrete5/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.designvsdevelop.com</link>
+	<description>the department of planned spontaneity</description>
+	<lastBuildDate>Fri, 20 May 2011 15:36:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<item>
+		<title>concrete5 &#8211; first impressions</title>
+		<link>http://www.designvsdevelop.com/concrete5-first-impressions/</link>
+		<comments>http://www.designvsdevelop.com/concrete5-first-impressions/#comments</comments>
+		<pubDate>Fri, 17 Apr 2009 17:19:10 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[concrete5]]></category>
+		<category><![CDATA[content management]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[wordpress]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=333</guid>
+		<description><![CDATA[I downloaded the concrete5 CMS a couple of weeks ago and intended to write a critique earlier, but am only now getting around to doing so. Since then, this article was released on CMS Wire and Joomla! fans on Twitter began talking. What&#8217;s good One common pitfall of CMSes is to abstract away the concept [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>I downloaded the <a href="http://concrete5.org/">concrete5</a> CMS a couple of weeks ago and intended to write a critique earlier, but am only now getting around to doing so. Since then, <a href="http://www.cmswire.com/cms/web-cms/drupal-and-joomla-to-lose-market-share-to-concrete5-web-cms-004347.php">this article</a> was released on CMS Wire and Joomla! fans on Twitter <a href="http://search.twitter.com/search?q=concrete5+joomla">began talking</a>.</p>
+<h2>What&#8217;s good</h2>
+<p>One common pitfall of CMSes is to abstract away the concept of a page. concrete5 avoids this and very much embraces pages. A+ in my book. While it&#8217;s true that some layer of abstraction can be helpful in certain cases (usually when you&#8217;re building an application inside of your CMS), it adds extra work for most webmasters.</p>
+<p>Editing pages is also very straightforward. Once you&#8217;re in edit mode, all of the blocks (similar to Joomla! modules) appear with dotted borders. Clicking on one gives you several options for editing the block, including dragging and dropping the block to a new position. Very nicely done.</p>
+<p>The features built around content5 are thoughtful. Versioning is built in and outputs diff-style coloring when comparing revisions. There are also extensions to help you embed videos, Google Maps, slide shows, and RSS feeds.</p>
+<p>About 70% of the functionality you&#8217;ll need on a regular basis is contained in the toolbar that appears as you&#8217;re editing individual pages. For the rest, there&#8217;s a specific &#8220;dashboard&#8221; backend where you can go to manage themes and files, get reports, and perform other administrative tasks.</p>
+<h2>Theming is okay</h2>
+<p>The theming system is reasonable. Like Joomla!, you can add specific themes to specific pages. Closer to Drupal, your theme can define several different page types, which might eliminate the need for separate themes. However, concrete5 requires theme designers to instantiate objects within their markup, then call member functions of those objects to display output. This bothers me. It seems like static function calls or embedded tokens would handle this more elegantly.</p>
+<p>Also, the greensalad example theme uses the &#8220;header.php at the top, footer.php at the bottom&#8221; style of breaking up the markup—I loathe this. There&#8217;s no reason to use this error-prone method for theming: you end up with tags that are opened in one file and closed in another.</p>
+<h2>What&#8217;s annoying</h2>
+<p>While the simplicity of editing individual pages is definitely something I prefer, concrete5 has sacrificed some features to get there. I was not able to find any kind of feature to create a blog-style index of content made up of blurbs from other pages. <a href="http://www.concrete5.org/marketplace">Add-ons</a> are scarce: if you&#8217;re looking for a forum or shopping cart, you might be in for a wait until they attract more developers to the platform.</p>
+<p>I ran into a few speed bumps when installing concrete5 locally. After downloading it and going to the installation screen, there was a checklist of PHP configuration settings necessary to run concrete5 (not unlike Joomla!&#8217;s). Most of them were good to go after tweaking folder permissions, but I did not have the GD library setup on my self-compiled version of PHP. I was a little surprised that the system would not let me continue installation. While I&#8217;m sure there are features in concrete5 that use server-side image processing, this doesn&#8217;t strike me as something so vital as to halt installation. (I was able to successfully install both GD and concrete5 on my spare Ubuntu machine.)</p>
+<p>Although the GD dependency was annoying, the halted installation uncovers something even more so. If the installer detects even the slightest issue with your configuration, an advertisement for professional installation is displayed. Quite tacky; they could have at least provided a <a href="http://www.concrete5.org/community/forums/installation">link to their installation forum</a>.</p>
+<p>Which brings us to community. This company oozes a know-it-all attitude. In sharp contrast to the websites of other CMSes, their official <a href="http://www.concrete5.org/about/">About</a> page openly bashes Joomla!, Drupal, and WordPress; painting all three in rather broad strokes. This is very disappointing, unnecessary, and ultimately counter-productive. I&#8217;m all for making bold statements, but they&#8217;re driving away the very people who could help their platform grow quickly.</p>
+<h2>Final word</h2>
+<p>concrete5 is a very promising CMS that does the basics very well. The interface is picked up quickly and things are easy to find. However, if they&#8217;re earnest about building a community around their code, they might want to tone down the self-worship a smidge. And is content management really a <a href="http://concretethestudio.com/">human right</a>?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/concrete5-first-impressions/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+		</item>
+	</channel>
+</rss>

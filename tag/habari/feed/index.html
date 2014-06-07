@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design vs. Develop &#187; habari</title>
+	<atom:link href="http://www.designvsdevelop.com/tag/habari/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.designvsdevelop.com</link>
+	<description>the department of planned spontaneity</description>
+	<lastBuildDate>Fri, 20 May 2011 15:36:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<item>
+		<title>Reviewing Habari</title>
+		<link>http://www.designvsdevelop.com/reviewing-habari/</link>
+		<comments>http://www.designvsdevelop.com/reviewing-habari/#comments</comments>
+		<pubDate>Sat, 09 Aug 2008 23:30:49 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[habari]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[templating]]></category>
+		<category><![CDATA[theming]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=285</guid>
+		<description><![CDATA[Yesterday, I decided to install the blogging software Habari on my computer to see what the buzz was about. Overall, I&#8217;m impressed with the system and I think it shows a lot of promise for the future. It&#8217;s all written in modern PHP 5 (5.2 is the minimum) with PDO so you are not tied [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Yesterday, I decided to install the blogging software <a href="http://www.habariproject.org">Habari</a> on my computer to see what the buzz was about. Overall, I&#8217;m impressed with the system and I think it shows a lot of promise for the future. It&#8217;s all written in modern PHP 5 (5.2 is the minimum) with <a href="http://us3.php.net/manual/en/book.pdo.php">PDO</a> so you are not tied to MySQL. Installation was very easy (after I added FollowSymLinks to my .htaccess file). The backend is slick and powered with keyboard shortcuts. Performance seemed fast, but a localhost environment doesn&#8217;t really give you a good measure of this so YMMV.</p>
+<p>My only complaint about the system is one that I also have with WordPress: the theming system <a href="http://www.designvsdevelop.com/wordpress-one-month-later/">breaks everything into entirely too many pieces</a>. Tags open in one file and close in another. Loops are all over the place. You have to create a class in theme.php to pull in and assign data to the theme. This will certainly difficult for most designers to get their heads around.</p>
+<p>I&#8217;m definitely a fan of Joomla!&#8217;s templating system. While Joomla! is a more general-purpose content management system and Habari is focused on blogging, I think the overall concept could be ported. In Joomla! templates, you have all of the essential markup from &lt;html&gt; to &lt;/html&gt; in one file. Within this file, you add named placeholders (bottom, left, right, main, banner, etc&#8230;). What goes into these placeholders is determined by the admin of the Joomla! site. This makes it easy for admins to rearrange the elements to suit their desires, while template designers need not touch a line of PHP. In Joomla! templates, desigers can rely on the default core output, then override specific elements only when necessary.</p>
+<p>Habari is still in alpha (version 0.6), but it seems to be maturing very quickly. If you&#8217;re doing blog sites and are up for something new, definitely give Habari a test. I&#8217;m looking forward to the betas and stable copies, but hope that the templating can be simplified drastically.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/reviewing-habari/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design vs. Develop &#187; christmas</title>
+	<atom:link href="http://www.designvsdevelop.com/tag/christmas/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.designvsdevelop.com</link>
+	<description>the department of planned spontaneity</description>
+	<lastBuildDate>Fri, 20 May 2011 15:36:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<item>
+		<title>Quick and dirty christmas list &#8211; a Joomla! Recipe</title>
+		<link>http://www.designvsdevelop.com/quick-and-dirty-christmas-list-a-joomla-recipe/</link>
+		<comments>http://www.designvsdevelop.com/quick-and-dirty-christmas-list-a-joomla-recipe/#comments</comments>
+		<pubDate>Thu, 01 Jan 2009 19:36:36 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[christmas]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[mvc]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=315</guid>
+		<description><![CDATA[Right around Thanksgiving, my mother will usually email asking for a list of Christmas gifts. This previously presented a messy problem: we would have to sit down, come up with a list, send it to Mom, then she would have to circulate the list and coordinate who was buying what. Instead of doing that this [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Right around Thanksgiving, my mother will usually email asking for a list of Christmas gifts. This previously presented a messy problem: we would have to sit down, come up with a list, send it to Mom, then she would have to circulate the list and coordinate who was buying what. Instead of doing that this year, I told Mom to wait a week. Ten days later, I managed to scrounge up enough time to dash off a Joomla!-based system to handle all of this. Joomla! took care of the basic interface and user management tasks, leaving me to finish off the rest as an MVC component.</p>
+<p>First, I installed a standard copy of Joomla! 1.5 with no sample content. I adjusted the parameters of the default rhuk_milkyway template so that it would have green links and headers (Color Variation) with a solid red background (Background Variation). I could have ditched the Joomla! logo in the header, but was lazy and just left it in.</p>
+<p>Next, I added an instance of the Login module and unpublished the main menu. Although the main menu was unpublished, I left it in the system as a holding place for the default menu item. I also set Joomla! to disallow account self-registration: only seven specific people would ever be logging into this site and I didn&#8217;t want any passers-by creating accounts. I created an additional menu and set the access level to registered users only; no need to show the world any piece of our application. This menu included a link to the User Form Layout which I titled &#8220;Change my password&#8221; (even though you can do more than change your password from this form).</p>
+<p>Finally, I cobbled together a custom MVC component to handle the lists. Before writing a lot of code, I created a menu link pointing to the component on the main menu, then adjusted the login module to redirect to this menu item after authenticating. This makes the login process seamless: you don&#8217;t see any parts of or links to the list component before you are logged in. Your only options are to either log in, retrieve your username, or retrieve your password. Once you&#8217;ve successfully logged in, you&#8217;re immediately taken to the component.</p>
+<p>After configuring the login module, I continued to build the component. Before calling the controller, I used this code to make sure the user is logged in before continuing:</p>
+<pre>if (!$user-&gt;id) {</pre>
+<pre>    global $mainframe;</pre>
+<pre>    $mainframe-&gt;redirect('index.php', 
+      'No peeking! You have to log in first.');</pre>
+<pre>}</pre>
+<p>Next, I have controller sets the default view to &#8216;mylist&#8217;. This view lists all of your requested items and provides a form for entering more. To set the default view, I overrode the display() function for the controller like this:</p>
+<pre>function display()</pre>
+<pre>{</pre>
+<pre>    $view = JRequest::getVar('view', '');</pre>
+<pre>    if ($view == '') {</pre>
+<pre>        JRequest::setVar('view', 'mylist');</pre>
+<pre>    }</pre>
+<pre>    parent::display();</pre>
+<pre>}</pre>
+<p>This way, if &#8216;task&#8217; in the request is empty, the component automatically calls display(), finds that &#8216;view&#8217; is also empty, then sets it to &#8216;mylist&#8217;. Now, while the &#8216;mylist&#8217; view lists all of our requests, it does not display the purchase status of those gifts. In addition to the &#8216;mylist&#8217; view, there is an &#8216;item&#8217; view providing a form where you can edit gifts you&#8217;ve already added. Links to the &#8216;item&#8217; view are provided from the &#8216;mylist&#8217; view.</p>
+<p>In contrast to &#8216;mylist&#8217;, the &#8216;otherlists&#8217; view displays all of the gift requests from all the other users, while listing gift purchases. It also has links you can click to mark yourself as having bought a specific gift. This way, people know not to buy something you&#8217;ve already purchasing. The code also makes it possible to mark multiple people as chipping in on a gift.</p>
+<p>While the &#8216;item&#8217; view simply loads a single row from the database, the &#8216;mylist&#8217; and &#8216;otherlist&#8217; views have their own data models. The data model for &#8216;mylist&#8217; is very simple and has only one function, but the &#8216;otherlists&#8217; model has functions for getting a list of all users, getting the buyers for each item, and getting all of the items listed by everyone else.</p>
+<p>While there is more code I would like to add (such as gift suggestions for people who are slow about building their wishlist), following the MVC pattern now will make it easy to do that later. In the meantime, <a href="/wp-content/uploads/2009/01/christmaslist.zip">here&#8217;s a link to the code as it stands today</a> (NOTE: this is not an installable Joomla! package. Drop com_christmaslist into the frontend components folder, run the .sql, then make an entry into jos_components if you want).</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/quick-and-dirty-christmas-list-a-joomla-recipe/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

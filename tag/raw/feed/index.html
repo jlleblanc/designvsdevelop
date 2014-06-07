@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design vs. Develop &#187; raw</title>
+	<atom:link href="http://www.designvsdevelop.com/tag/raw/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.designvsdevelop.com</link>
+	<description>the department of planned spontaneity</description>
+	<lastBuildDate>Fri, 20 May 2011 15:36:55 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<item>
+		<title>The way NOT to do JavaScript in Joomla!</title>
+		<link>http://www.designvsdevelop.com/the-way-not-to-do-javascript-in-joomla/</link>
+		<comments>http://www.designvsdevelop.com/the-way-not-to-do-javascript-in-joomla/#comments</comments>
+		<pubDate>Sun, 02 Aug 2009 19:01:54 +0000</pubDate>
+		<dc:creator><![CDATA[Joe LeBlanc]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[ajax]]></category>
+		<category><![CDATA[dcphp]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[mvc]]></category>
+		<category><![CDATA[raw]]></category>
+
+		<guid isPermaLink="false">http://www.designvsdevelop.com/?p=352</guid>
+		<description><![CDATA[While doing a little Sunday afternoon browsing of Twitter, I noticed Amy Stephen warning about a bad technique for using Joomla! with AJAX-style requests. I followed the link (WARNING: don&#8217;t use this code!) and found security vulnerabilities right away. Since the blog in question doesn&#8217;t support comments, I&#8217;m forced to respond here. First, as Amy pointed [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>While doing a little Sunday afternoon browsing of Twitter, I noticed Amy Stephen <a href="http://twitter.com/AmyStephen/status/3088009866">warning</a> about a bad technique for using Joomla! with AJAX-style requests. I followed the <a href="http://www.prodevtips.com/2009/08/01/adding-ajax-to-joomla-15-with-jquery/">link</a> (<strong>WARNING:</strong> don&#8217;t use this code!) and found security vulnerabilities right away. Since the blog in question doesn&#8217;t support comments, I&#8217;m forced to respond here.</p>
+<p>First, as Amy pointed out, the technique creates another entry point into Joomla. While this <em>can</em> be used effectively if you know what you&#8217;re doing, it&#8217;s totally unnecessary for a casual application of asynchronous JavaScript. Next, class, who can tell me what&#8217;s wrong with this piece of code?</p>
+<pre>cExt( $_POST['func'] );</pre>
+<p>That&#8217;s right, we&#8217;re passing data straight from our HTTP request (which can come from anywhere in the WORLD) into our application&#8217;s logic. Once we get into the the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">cExt <span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, fantasy; line-height: 19px; white-space: normal; font-size: 13px; ">function, the variable is used to execute code with <strong>no</strong> filtering whatsoever:</span></span></p>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">function cExt($func = &#8221;){</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">$cext = null;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">if(!empty($GLOBALS['cExt']))</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">$cext = $GLOBALS['cExt'];</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">else{</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">$GLOBALS['cExt'] = new plgCommunityExt();</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">$cext = $GLOBALS['cExt'];</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">}</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">if(empty($func))</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">return $cext;</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">else{</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">if($GLOBALS['ajax'] == true)</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">$cext-&gt;$func();</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">else</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">return $cext-&gt;$func();</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">}</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 133px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;">}</div>
+<pre>function cExt($func = ''){
+
+    $cext = null;
+
+    if(!empty($GLOBALS['cExt']))
+
+        $cext = $GLOBALS['cExt'];
+
+    else{
+
+        $GLOBALS['cExt'] = new plgCommunityExt();
+
+        $cext = $GLOBALS['cExt'];
+
+    }
+
+    if(empty($func))
+
+        return $cext;
+
+    else{
+
+        if($GLOBALS['ajax'] == true)
+
+            $cext-&gt;$func();
+
+        else
+
+            return $cext-&gt;$func();
+
+    }
+
+}</pre>
+<p>Please, regardless of whether or not you use Joomla, don&#8217;t do this! It is a totally insecure way of writing code. Instead, if you are using Joomla, you can at least filter this variable using the following code:</p>
+<pre>$func = JRequest::getCmd('func', '');</pre>
+<p>This code will filter the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">func</span> variable from the request and make sure it only includes numbers, letters, or underscores. Additionally, you should filter <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">$func</span> to make sure a corresponding public function in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">plgCommunityExt<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, fantasy; line-height: 19px; white-space: normal; font-size: 13px; "> class exists <strong>before</strong> attempting to use it to actually execute that function.</span></span></p>
+<p>As a side note, <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">$GLOBALS</span> is being used an awful lot here. While this isn&#8217;t a security risk in and of itself, it is a bad practice that can lead to insecure coding. If the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">register_globals</span> setting in PHP (going away in PHP 6) is turned on, this becomes a huge security risk as anyone in the world can set the value of <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px; font-size: 12px; white-space: pre; ">cExt</span> to anything.</p>
+<p>The post ends with this quick jibe:</p>
+<address>That was pretty easy wasn’t it, in order to get quick results you just have to find these shortcuts which will spare you the time and pain of having to read some Joomla-, or pick your favorite, CMS book.</address>
+<p>I&#8217;d argue that the author of this blog post would not only benefit from reading a book about CMS development, but one on basic PHP security. The technique he describes is insecure in any PHP-based framework or CMS.</p>
+<p>Fortunately, you don&#8217;t even have to run to the bookstore to find examples of the correct way of doing these things. Louis Landry has a quick example of how to return JSON formatted data simply and securely on <a href="http://groups.google.com/group/joomla-dev-cms/browse_thread/thread/5ac0b49c0f458b1a">this thread</a>, without having to create a special component view. If you do want to use a view, this <a href="http://blog.syncleon.com/2009/05/ajax-ify-your-joomla-website.html">blog post</a> will show you how to do it.</p>
+<p>Finally, if you do want to learn how to add AJAX-style requests to Joomla (without necessarily using JSON), I&#8217;ll shamelessly plug <a href="http://www.packtpub.com/learning-joomla-1.5-extension-development/book">my own book</a>. But you don&#8217;t even have to buy it, because the <a href="http://www.packtpub.com/files/learning-joomla-1-5-extension-development-sample-chapter-8-using-javascript-effects.pdf">sample chapter</a> is indeed the one on JavaScript and Joomla (start on page 168 if you already know Joomla! MVC).</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.designvsdevelop.com/the-way-not-to-do-javascript-in-joomla/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

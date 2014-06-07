@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Design vs. Develop</title>
+<script type="text/javascript" src="../../wp-content/themes/DesignVsDevelop/script.js"></script>
+<link rel="stylesheet" href="../../wp-content/themes/DesignVsDevelop/style.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Design vs. Develop RSS Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/atom+xml" title="Design vs. Develop Atom Feed" href="../../feed/atom/index.html" /> 
+<link rel="pingback" href="../../xmlrpc.php" />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js%3Fver=1.11.0'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+<link href="../../wp-content/plugins/spam-stopper/spam-stopper.css" rel="stylesheet" type="text/css" />			<script type="text/javascript">
+			/* <![CDATA[ */
+				if (typeof jQuery == 'undefined') {  
+	   				 // jQuery is not loaded  
+				} else {
+					jQuery(function(){
+						jQuery('#commentform').submit(function(){
+								if (jQuery('#author').val()=="") {
+									alert("Please input your name");
+									return false;     		
+								}
+								var email_field = jQuery('#email');
+								var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+								if (!emailFilter.test(email_field.val())) {
+									alert("Please input a valid email");
+									return false;
+								}
+								if (jQuery('#spamq').val()=="") {
+									alert("Please answer the anti-spam question");
+									return false;
+								}
+								if (jQuery('#comment').val()=="") {
+									alert("Please input a comment");
+									return false;
+								}
+								var spamq = jQuery('#spamq').val();			
+								if (spamq.toUpperCase()!=='HOT') {
+									alert("Incorrect anti-spam answer. Please re-answer the question! The correct answer is \"Hot\"");
+									return false;
+								}
+								return true;
+						});
+					});
+				}
+			/* ]]> */
+			</script>
+				<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<div id="art-page-background-simple-gradient">
+</div>
+<div id="art-main">
+<div class="art-Sheet">
+    <div class="art-Sheet-tl"></div>
+    <div class="art-Sheet-tr"></div>
+    <div class="art-Sheet-bl"></div>
+    <div class="art-Sheet-br"></div>
+    <div class="art-Sheet-tc"></div>
+    <div class="art-Sheet-bc"></div>
+    <div class="art-Sheet-cl"></div>
+    <div class="art-Sheet-cr"></div>
+    <div class="art-Sheet-cc"></div>
+    <div class="art-Sheet-body">
+<div class="art-Header">
+    <div class="art-Header-jpeg"></div>
+
+</div>
+<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+		<li><a class="active" href="../../index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="page_item page-item-234"><a href="../../about/index.html"><span class="l"></span><span class="r"></span><span class="t">About</span></a></li>
+	</ul>
+</div>
+<div class="art-contentLayout">
+<div class="art-content">
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Daily Message 1.5 breaks in RC3">
+Daily Message 1.5 breaks in RC3</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 14th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>The Daily Message Joomla! component tutorial breaks in Release Candidate 3. I&#8217;m going to release a fixed copy soon. In the meantime, you should be able to fix it by replacing these lines&#8230;</p>
+<blockquote><p>
+$menu =&#038; JMenu::getInstance();<br />
+$item = $menu->getActive();<br />
+$params =&#038; $menu->getParams($item->id);
+</p></blockquote>
+<p>&#8230;with these:</p>
+<blockquote><p>
+global $mainframe;<br />
+$params = &#038;$mainframe->getParams();
+</p></blockquote>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Daily Message 1.5 breaks in RC3">2 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to jQuery presentation">
+jQuery presentation</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 12th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>This past Wednesday, I did a presentation on jQuery at the <a href="http://phpdc.org">DCPHP Developers Group</a>. The presentation content (which is written in jQuery) is available <a href="http://www.jlleblanc.com/jquerypresentation">here</a>.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Designed by Apple in California">
+Designed by Apple in California</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 8th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>Joel <a href="http://www.joelonsoftware.com/items/2007/10/05.html">reflects</a> on some of Apple&#8217;s subtle marketing and Microsoft&#8217;s lame attempt at copying it. </p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to While programming today&#8230;">
+While programming today&#8230;</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+September 24th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>I ran into <a href="http://en.wikipedia.org/wiki/Paamayim_Nekudotayim">this</a> error. Enjoy!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Joomla! Day NYC">
+Joomla! Day NYC</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+September 18th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>Joomla! Day is finally hitting the East Coast! I&#8217;ll be up in NYC on October 13th for the unconference. Register here: <a href="http://www.joomladayusa.org">www.joomladayusa.org</a>. Thanks to Google for the space!</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Municipal wifi losing traction">
+Municipal wifi losing traction</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+September 15th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>This <a href="http://www.economist.com/business/displaystory.cfm?story_id=9726651&#038;CFID=23446740&#038;CFTOKEN=73348631">article</a> from the Economist describes the struggle that citywide wifi networks are facing. When people started proposing these networks, I knew they wouldn&#8217;t last long. Wifi is designed to cover your house and possibly your neighbor&#8217;s. It just doesn&#8217;t have the range necessary to make buying all of the routers cost effective. </p>
+<p>As far as I can remember, two rationales were given for promoting these networks: </p>
+<ul>
+<li>Attracting well-heeled, &#8220;high-tech&#8221; workers to the city.</li>
+<li>Providing affordable Internet access for the poor.</li>
+</ul>
+<p>It is yet to be seen if ubiquitous public wifi access would really be a deal maker/breaker for IT professionals. Most of the ones I know who feel the need for that much connectivity have already shelled out for a data plan with an existing wireless provider.</p>
+<p>This leaves us with cheap access for poor people. If this is a goal to be pursued, shouldn&#8217;t these cities already be providing vouchers instead? I think a lot of these places got caught up in some false drama of Internet access becoming &#8220;as free as air&#8221; and went ahead building these networks.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Yes, a post about what I had for dinner&#8230;">
+Yes, a post about what I had for dinner&#8230;</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+September 2nd, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>&#8230;but at least it&#8217;s not a post about blogging. Tonight I prepared tilapia, rice, and a salad I&#8217;m very proud of. The salad was made out of problem ingredients. My brother and I have been making lettuce wraps very frequently, so I buy full heads of lettuce with broad leaves. Unfortunately, I accidentally bought a head of prepackaged lettuce with narrow leaves yesterday. I also bought some fresh basil (because I can&#8217;t resist it) but some of the leaves on the plant were beginning to wither, so I took those branches off right away. We have a leftover bottle of this Thai lemongrass marinade that got drowned in the beef when we tried to use it last, so that became the dressing base. Finally, I wanted to use some celery before it went bad, so a couple of stalks got chopped up.</p>
+<p>I was going to make some analogy about reusing abandoned PHP projects to make components and modules, but that just seemed too geeky and corny. The moral of the story is that if you have a bunch of useless ingredients in your kitchen, lay them out on the table and you&#8217;ll end up with something tasty to eat.</p>
+<p>(recipe below the fold)</p>
+<p><strong>Impromptu leftovers salad that goes well with fish</strong> </p>
+<p>1/2 cup chopped celery (crosswise)<br />
+1/4 cup raisins (ooooh&#8230; surprise ingredient!)<br />
+1 teaspoon Extra Virgin Olive Oil (always thought virginity was a binary sort of thing; chefs evidently feel otherwise)<br />
+2 tablespoons of Thai lemongrass marinade from Harris Teeter that doesn&#8217;t work very well as a marinade<br />
+1/4 cup shredded fresh basil<br />
+Sprinkling of dill weed<br />
+Big pinch of kosher salt<br />
+Several lettuce leaves (to taste)</p>
+<p>Wash the lettuce and basil because there&#8217;s no telling who touched it before you did, even if the package says &#8220;prewashed.&#8221; Put them in a bowl; preferably a hand-crafted salad bowl, but a metallic measuring bowl will also do. Get out a much smaller bowl and swish around all of the remaining ingredients. Actually, if you don&#8217;t want to dirty up a perfectly good and clean bowl, you can probably just use the first bowl for this step and dump the greens on top. Toss irregularly. Consume promptly. Serves two, unless somebody eats a smaller portion.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Don&#8217;t foward emails, really">
+Don&#8217;t foward emails, really</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+August 26th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>Today, someone emailed me an Amber Alert for &#8220;Ashley Flores.&#8221; I googled that name and got a <a href="http://www.snopes.com/inboxer/missing/ashleyflores.asp">Snopes page</a> as the top hit. When you hit the Forward button, the email address the sender along with other recipient&#8217;s email addresses are typically added to the message body. Once you&#8217;re four or five levels on down the chain, all sorts of people you don&#8217;t know now have your email address. All because of a prank. Be careful before you forward emails and don&#8217;t forward something that&#8217;s already been down two or three levels.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Daily Message 1.5 Released">
+Daily Message 1.5 Released</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+August 25th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p>In case you didn&#8217;t already hear from elsewhere, a copy of the Daily Message component designed for Joomla 1.5 is now <a href="http://www.jlleblanc.com/joomla/Tutorials/Daily_Message_Component_Tutorial_for_Joomla_1%115/">ready for your perusal</a>. I can&#8217;t believe it&#8217;s already been three years since I released the original; the response has been nothing short of amazing! I decided not to implement a full model-view-controller design in the tutorial to keep things simple. It just has a controller for now; I might add a second copy with views and models later. Why write this tutorial? When I took AP Computer Science, the extremely nerdily titled &#8220;C++ for You++&#8221; took the approach of starting you with a complete program processing input and output. The assignment was to just try to figure out what it did and to get a feel for the language. I found this approach to be very helpful, so I&#8217;ve tried to carry a bit of that into my tutorials.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Daily Message 1.5 Released">4 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Woz on home energy efficiency">
+Woz on home energy efficiency</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+August 17th, 2007
+</div>
+<div class="art-PostContent">
+
+          <p><a href="http://en.wikipedia.org/wiki/Steve_Wozniak">Steve Wozniak</a> was recently <a href="http://www.ecnmag.com/article.aspx?id=146610&#038;menuid=&#038;adcode=section=effzone">interviewed</a> about a housebuilding project he&#8217;s planning and how he intends to build it to be energy efficient. However, some of the readers point out that his building materials will only work in coastal California.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+
+<div class="art-PostContent">
+
+<div class="navigation">
+	<div class="alignleft"><a href="../11/index.html" >&laquo; Older Entries</a></div>
+	<div class="alignright"><a href="../9/index.html" >Newer Entries &raquo;</a></div>
+</div>
+
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+
+</div>
+<div class="art-sidebar1">      
+<div id="text-3" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://www.lynda.com/JosephLeBlanc" alt="Joomla! tutorials" border="0">Check out my Lynda.com video tutorials on Joomla 1.7 and 1.5!</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-4" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Comment policy</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget">All comments must be on topic. Off-topic comments will be deleted. Please use your real name. Comments coming from the same visitor across multiple posts in a short period of time will be considered spamming.</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Recent Comments</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<ul id="recentcomments"><li class="recentcomments"><a href='http://www.bryantsmith.com/template/' rel='external nofollow' class='url'>CSS Templates</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15462">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15459">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://osiris.samybaxy.net' rel='external nofollow' class='url'>Samybaxy</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15458">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15453">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.FreemanFeedback.com' rel='external nofollow' class='url'>Thomas Freeman</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15452">Joomla&#8217;s True Merit</a></li></ul>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-5" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Coworking at&#8230;</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://hubaustin.com">HubAustin</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="linkcat-2" class="widget widget_links"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Blogroll</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.alledia.com/blog/" rel="acquaintance met">Alledia</a></li>
+<li><a href="http://benramsey.com" rel="acquaintance met">Ben Ramsey</a></li>
+<li><a href="http://brandonsavage.net" rel="colleague">Brandon Savage</a></li>
+<li><a href="http://www.caseysoftware.com/blog" rel="colleague">CaseySoftware</a></li>
+<li><a href="http://shiflett.org/">Chris Shiflett</a></li>
+<li><a href="http://citycomfortsblog.typepad.com/cities/">City Comforts, the blog</a></li>
+<li><a href="http://blog.corywebb.com">Cory Webb</a></li>
+<li><a href="http://www.inshaw.com/blog/">In Shaw</a></li>
+<li><a href="http://www.joelonsoftware.com">Joel on Software</a></li>
+<li><a href="http://www.joomlaperformance.com/home/" rel="acquaintance met">Joomla Performance</a></li>
+<li><a href="http://nataliemlewis.wordpress.com/" rel="friend met colleague" title="Get Free!">Natalie M. Lewis</a></li>
+<li><a href="http://www.picnet.net/blog" rel="colleague">PICnet Blog</a></li>
+<li><a href="http://terrychay.com/blog/">Terry Chay</a></li>
+<li><a href="http://blog.spacemonkeylabs.com/" rel="colleague">The Spacemonkey Chronicles</a></li>
+<li><a href="http://zviband.com/" rel="colleague">Zvi Band</a></li>
+
+	</ul>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>
+<div id="text-1" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><p><a href="http://www.walkscore.com">My Walk Score is 75, what's yours?</a></p></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Tags</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<div class="tagcloud"><a href='../../tag/book/index.html' class='tag-link-114' title='2 topics' style='font-size: 9.9236641221374pt;'>book</a>
+<a href='../../tag/chicago/index.html' class='tag-link-71' title='4 topics' style='font-size: 12.274809160305pt;'>chicago</a>
+<a href='../../tag/css/index.html' class='tag-link-51' title='4 topics' style='font-size: 12.274809160305pt;'>css</a>
+<a href='../../tag/dcphp/index.html' class='tag-link-26' title='8 topics' style='font-size: 14.946564885496pt;'>dcphp</a>
+<a href='../../tag/documentation/index.html' class='tag-link-34' title='3 topics' style='font-size: 11.206106870229pt;'>documentation</a>
+<a href='../../tag/drupal/index.html' class='tag-link-6' title='6 topics' style='font-size: 13.87786259542pt;'>drupal</a>
+<a href='../../tag/events/index.html' class='tag-link-29' title='5 topics' style='font-size: 13.129770992366pt;'>events</a>
+<a href='../../tag/fb/index.html' class='tag-link-137' title='9 topics' style='font-size: 15.480916030534pt;'>fb</a>
+<a href='../../tag/friends/index.html' class='tag-link-128' title='9 topics' style='font-size: 15.480916030534pt;'>friends</a>
+<a href='../../tag/housekeeping/index.html' class='tag-link-3' title='1 topic' style='font-size: 8pt;'>housekeeping</a>
+<a href='../../tag/howtojoomla/index.html' class='tag-link-146' title='3 topics' style='font-size: 11.206106870229pt;'>howtojoomla</a>
+<a href='../../tag/html/index.html' class='tag-link-50' title='4 topics' style='font-size: 12.274809160305pt;'>html</a>
+<a href='../../tag/jab11/index.html' class='tag-link-167' title='2 topics' style='font-size: 9.9236641221374pt;'>jab11</a>
+<a href='../../tag/javascript/index.html' class='tag-link-14' title='4 topics' style='font-size: 12.274809160305pt;'>javascript</a>
+<a href='../../tag/joomla/index.html' class='tag-link-8' title='40 topics' style='font-size: 22pt;'>joomla</a>
+<a href='../../tag/joomla-15/index.html' class='tag-link-31' title='12 topics' style='font-size: 16.656488549618pt;'>Joomla 1.5</a>
+<a href='../../tag/joomladay/index.html' class='tag-link-153' title='2 topics' style='font-size: 9.9236641221374pt;'>joomladay</a>
+<a href='../../tag/joomlaexpo/index.html' class='tag-link-70' title='5 topics' style='font-size: 13.129770992366pt;'>joomlaexpo</a>
+<a href='../../tag/jquery/index.html' class='tag-link-13' title='4 topics' style='font-size: 12.274809160305pt;'>jquery</a>
+<a href='../../tag/lyndacom/index.html' class='tag-link-106' title='3 topics' style='font-size: 11.206106870229pt;'>lynda.com</a>
+<a href='../../tag/missions/index.html' class='tag-link-142' title='7 topics' style='font-size: 14.412213740458pt;'>missions</a>
+<a href='../../tag/mootools/index.html' class='tag-link-119' title='2 topics' style='font-size: 9.9236641221374pt;'>mootools</a>
+<a href='../../tag/mvc/index.html' class='tag-link-120' title='2 topics' style='font-size: 9.9236641221374pt;'>mvc</a>
+<a href='../../tag/philippines/index.html' class='tag-link-141' title='8 topics' style='font-size: 14.946564885496pt;'>philippines</a>
+<a href='../../tag/php/index.html' class='tag-link-4' title='13 topics' style='font-size: 17.083969465649pt;'>php</a>
+<a href='../../tag/php-appalachia/index.html' class='tag-link-64' title='2 topics' style='font-size: 9.9236641221374pt;'>php appalachia</a>
+<a href='../../tag/phptek/index.html' class='tag-link-127' title='2 topics' style='font-size: 9.9236641221374pt;'>phptek</a>
+<a href='../../tag/podcast-suite/index.html' class='tag-link-55' title='7 topics' style='font-size: 14.412213740458pt;'>podcast suite</a>
+<a href='../../tag/products/index.html' class='tag-link-59' title='2 topics' style='font-size: 9.9236641221374pt;'>products</a>
+<a href='../../tag/programming/index.html' class='tag-link-61' title='2 topics' style='font-size: 9.9236641221374pt;'>programming</a>
+<a href='../../tag/security/index.html' class='tag-link-9' title='4 topics' style='font-size: 12.274809160305pt;'>security</a>
+<a href='../../tag/seo/index.html' class='tag-link-72' title='3 topics' style='font-size: 11.206106870229pt;'>seo</a>
+<a href='../../tag/skype/index.html' class='tag-link-84' title='2 topics' style='font-size: 9.9236641221374pt;'>skype</a>
+<a href='../../tag/software-business/index.html' class='tag-link-57' title='2 topics' style='font-size: 9.9236641221374pt;'>software business</a>
+<a href='../../tag/templates/index.html' class='tag-link-122' title='2 topics' style='font-size: 9.9236641221374pt;'>templates</a>
+<a href='../../tag/templating/index.html' class='tag-link-47' title='3 topics' style='font-size: 11.206106870229pt;'>templating</a>
+<a href='../../tag/theming/index.html' class='tag-link-46' title='2 topics' style='font-size: 9.9236641221374pt;'>theming</a>
+<a href='../../tag/timothy-internship-program/index.html' class='tag-link-164' title='6 topics' style='font-size: 13.87786259542pt;'>timothy internship program</a>
+<a href='../../tag/training/index.html' class='tag-link-74' title='2 topics' style='font-size: 9.9236641221374pt;'>training</a>
+<a href='../../tag/twitter/index.html' class='tag-link-81' title='3 topics' style='font-size: 11.206106870229pt;'>twitter</a>
+<a href='../../tag/validation/index.html' class='tag-link-52' title='2 topics' style='font-size: 9.9236641221374pt;'>validation</a>
+<a href='../../tag/video/index.html' class='tag-link-107' title='3 topics' style='font-size: 11.206106870229pt;'>video</a>
+<a href='../../tag/washington-dc/index.html' class='tag-link-28' title='5 topics' style='font-size: 13.129770992366pt;'>washington dc</a>
+<a href='../../tag/widget-devcamp/index.html' class='tag-link-25' title='2 topics' style='font-size: 9.9236641221374pt;'>widget devcamp</a>
+<a href='../../tag/wordpress/index.html' class='tag-link-7' title='6 topics' style='font-size: 13.87786259542pt;'>wordpress</a></div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-2" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><div id="twitter_div">
+<h2 class="twitter-title">Twitter Updates</h2>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/jlleblanc.json?callback=twitterCallback2&count=5"></script>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-7" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array' title='JavaScript Array .every'><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JavaScript Array .every'/></a>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div></div>
+</div>
+<div class="cleared"></div>
+
+<div class="art-Footer">
+    <div class="art-Footer-inner">
+                <a href="../../feed/index.html" class="art-rss-tag-icon" title="RSS"></a>
+                <div class="art-Footer-text">
+<p>
+<a href='index.html#'>Contact Us</a> | <a href='index.html#'>Terms of Use</a> | <a href='index.html#'>Trademarks</a> | <a href='index.html#'>Privacy Statement</a><br />Copyright &copy; 2009 Design vs. Develop. All Rights Reserved.</p>
+</div>
+    </div>
+    <div class="art-Footer-background">
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+</div>
+
+<!-- 19 queries. 0.440 seconds. -->
+<div></div>
+</body>
+<script type="text/javascript">
+var woopra_id = '3034226658';
+</script>
+<script src="http://static.woopra.com/js/woopra.js"></script>
+</html>

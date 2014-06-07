@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Design vs. Develop</title>
+<script type="text/javascript" src="../../wp-content/themes/DesignVsDevelop/script.js"></script>
+<link rel="stylesheet" href="../../wp-content/themes/DesignVsDevelop/style.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="http://www.designvsdevelop.com/wp-content/themes/DesignVsDevelop/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Design vs. Develop RSS Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/atom+xml" title="Design vs. Develop Atom Feed" href="../../feed/atom/index.html" /> 
+<link rel="pingback" href="../../xmlrpc.php" />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js%3Fver=1.11.0'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+<link href="../../wp-content/plugins/spam-stopper/spam-stopper.css" rel="stylesheet" type="text/css" />			<script type="text/javascript">
+			/* <![CDATA[ */
+				if (typeof jQuery == 'undefined') {  
+	   				 // jQuery is not loaded  
+				} else {
+					jQuery(function(){
+						jQuery('#commentform').submit(function(){
+								if (jQuery('#author').val()=="") {
+									alert("Please input your name");
+									return false;     		
+								}
+								var email_field = jQuery('#email');
+								var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+								if (!emailFilter.test(email_field.val())) {
+									alert("Please input a valid email");
+									return false;
+								}
+								if (jQuery('#spamq').val()=="") {
+									alert("Please answer the anti-spam question");
+									return false;
+								}
+								if (jQuery('#comment').val()=="") {
+									alert("Please input a comment");
+									return false;
+								}
+								var spamq = jQuery('#spamq').val();			
+								if (spamq.toUpperCase()!=='HOT') {
+									alert("Incorrect anti-spam answer. Please re-answer the question! The correct answer is \"Hot\"");
+									return false;
+								}
+								return true;
+						});
+					});
+				}
+			/* ]]> */
+			</script>
+				<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body>
+<div id="art-page-background-simple-gradient">
+</div>
+<div id="art-main">
+<div class="art-Sheet">
+    <div class="art-Sheet-tl"></div>
+    <div class="art-Sheet-tr"></div>
+    <div class="art-Sheet-bl"></div>
+    <div class="art-Sheet-br"></div>
+    <div class="art-Sheet-tc"></div>
+    <div class="art-Sheet-bc"></div>
+    <div class="art-Sheet-cl"></div>
+    <div class="art-Sheet-cr"></div>
+    <div class="art-Sheet-cc"></div>
+    <div class="art-Sheet-body">
+<div class="art-Header">
+    <div class="art-Header-jpeg"></div>
+
+</div>
+<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+		<li><a class="active" href="../../index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="page_item page-item-234"><a href="../../about/index.html"><span class="l"></span><span class="r"></span><span class="t">About</span></a></li>
+	</ul>
+</div>
+<div class="art-contentLayout">
+<div class="art-content">
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to The Death and Life of Great American Cities, by Jane Jacobs">
+The Death and Life of Great American Cities, by Jane Jacobs</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+November 15th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>Any search for good literature on the topic of urban development will inevitably lead to this book. After seeing numerous references throughout other books and blogs I&#8217;ve read, I decided to make a stop at the <a href="http://www.nbm.com" rel="tag">National Building Museum</a>&#8216;s bookstore, as the library copy was constantly checked out and Barnes and Noble didn&#8217;t seem to carry it. </p>
+<p>Mrs. Jacobs published this book in 1961, soon after the first large wave of suburbanization in the US after WWII. Refusing to discuss urban development in glittering generalities, she cites abundant example of interesting, lively neighborhoods (the North End in Boston and Greenwich Village in New York City) as well as dull monstrosities (Central Business Districts with &#8220;dense&#8221; towers and certain long blocks also within New York City). She derides the then-emerging philosophies of &#8220;Radiant Garden City&#8221; planning: tall mixed-use towers surrounded by large park-like plots. She also tackles the issue of racial discrimination in neighborhood building and &#8220;renewal,&#8221; where existing residents are unable to obtain financing for renovations and construction in deteriorating sections of large cities. Jacobs isn&#8217;t afraid to criticize efforts to sort citizens out by income, which ultimately exacerbate poverty.</p>
+<p>The book is entirely based off observations, rather than vague theories of how utopias can be constructed. Local offices with specific authority are effective, while general city-wide offices requiring ever-expanding bureaucracy are not. Short blocks with many intersections and buildings at the sidewalk are easier to navigate and more interesting than long ones with large building setbacks.</p>
+<p>The timelessness of this book is self-apparent when considering current exurban developments of McMansions and still-failing &#8220;projects.&#8221; Jacob&#8217;s practicality and candor make this book easy to understand and relate to actual situations readers have no doubt observed.</p>
+<p>Specific examples are cited where &#8220;eyes on the street&#8221; have fostered safe neighborhoods where a variety of citizens live comfortably. As more people use a particular street throughout the day, it becomes safer and even more lively. Likewise, areas with long, unwalkable blocks with uniform uses and limited hours repel people and become dangerous.</p>
+<p>The only drawback to this book would be its heft. Weighing in at 585 pages (Modern Library Edition), it can take quite a while to finish. For the merely curious, this may not be an appropriate introduction to urban development, although definitely worthwhile. David Sucher&#8217;s <a href="http://www.citycomforts.com/">City Comforts</a>, comprises a narrated, photographic look at practical urbanism much in the spirit and influence of Jacobs and is a much quicker read. However, any decent book on the topic will ultimately point back to Jacobs&#8217; reflections on real, safe, lively, interesting cities and the organized effort to kill them in the name of &#8220;orderly planning.&#8221;</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on The Death and Life of Great American Cities, by Jane Jacobs">4 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to I&#8217;m back!">
+I&#8217;m back!</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+November 12th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>Thanks to <a href="http://washingtondc.craigslist.org" rel="tag">craigslist</a> (and the person on the other end trying to get rid of an old computer), I&#8217;m now back online.</p>
+<p>While I was without a PC, I finished off reading some books, bought a car, visited with friends, and kept writing. Expect a book review early next week.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Off the grid&#8230;">
+Off the grid&#8230;</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 30th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>I won&#8217;t be able to blog or do any open-source programming for the next few days as my laptop suddenly stopped working. Dell&#8217;s supposed to send someone out with a replacement part this week, so we&#8217;ll see if that fixes evertyhing. In the meantime, development on the podcasting suite will be delayed (I&#8217;m soooooo close to a stable release). <i>(Special thanks goes to the Arlington County Library for making this post possible.)</i></p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Off the grid&#8230;">2 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to When I take the bus all the way to work&#8230;">
+When I take the bus all the way to work&#8230;</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 27th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>I usually wait for it right about <a href="http://www.washingtonpost.com/wp-dyn/content/article/2005/10/26/AR2005102602431.html">here</a>.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Los Angeles: America&#8217;s Dense Metropolis">
+Los Angeles: America&#8217;s Dense Metropolis</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 24th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>So claims the author of <a href="http://www.latimes.com/news/opinion/sunday/commentary/la-oe-bruegmann23oct23,0,3798054.story">this</a> op-ed. From the article:</p>
+<blockquote><p>
+The truth is that New York, Chicago and most of the older American cities had their greatest growth before there was anything resembling real public planning; the most basic American land planning tool, zoning, did not come into widespread use until the 1920s. <br />
+&#8230;<br />
+<br />
+Since World War II, moreover, the density of the Los Angeles region has climbed dramatically, while that of older cities in the North and East has plummeted. The result is that today the Los Angeles urbanized area, as reported by the U.S. Census Bureau, has just over 7,000 people per square mile &#8211; by a fair margin the densest in the United States.
+</p></blockquote>
+<p>That 7,000 figure looked a little dubious, so I did some digging at the <a href="http://www.census.gov" rel="tag">Census Bureau</a> website. </p>
+<p>The first thing we have to question is the use of the term &#8220;Los Angeles urbanized area.&#8221; For those of you unaware of Census Bureau <a href="http://www.census.gov/population/www/estimates/aboutmetro.html" rel="tag">CSMAs</a>, metropolitan areas typically include many counties beyond the core urban area. The Los Angeles CSMA includes Ventura County, Orange County, Los Angeles County, Riverside County, and San Bernardino County. Of these, Orange County has the highest density, coming in at 3,605.6 people per square mile. </p>
+<table width="70%">
+<tr>
+<td><a href="http://quickfacts.census.gov/qfd/states/06/06059.html" rel="tag">Orange County</a></td>
+<td>3,605.6</td>
+</tr>
+<tr>
+<td><a href="http://quickfacts.census.gov/qfd/states/06/06037.html" rel="tag">Los Angeles County</a></td>
+<td>2,344.2</td>
+</tr>
+<tr>
+<td><a href="http://quickfacts.census.gov/qfd/states/06/06111.html" rel="tag">Ventura County</a></td>
+<td>408.2</td>
+</tr>
+<tr>
+<td><a href="http://quickfacts.census.gov/qfd/states/06/06065.html" rel="tag">Riverside County</a></td>
+<td>214.4</td>
+</tr>
+<tr>
+<td><a href="http://quickfacts.census.gov/qfd/states/06/06071.html" rel="tag">San Bernardino County</a></td>
+<td>85.2</td>
+</tr>
+<tr>
+<td><b>Ambiguous Grand Total</b></td>
+<td>6657.6</td>
+</tr>
+</table>
+<p></p>
+<p>So if you add up each county&#8217;s density, you might come to a number near 7,000. However, this is totally erroneous: you&#8217;re adding averages. Likewise, adding these numbers and dividing by 5 will also be incorrect as the counties very greatly in square mileage. </p>
+<p>Could the &#8220;Los Angeles urbanized area&#8221; be a small, but heavily built-up portion of Los Angeles County that would indeed have 7,000 people per square mile? Ahh, <a href="http://quickfacts.census.gov/qfd/states/06/0644000.html">yes</a>, the central city itself. Now let&#8217;s look at his comparisons, <a href="http://quickfacts.census.gov/qfd/states/17/1714000.html" rel="tag">Chicago</a> (12,750.3 per sq/mi) and <a href="http://quickfacts.census.gov/qfd/states/36/3651000.html">New York</a> (26,402.9 per sq/mi). Just how is Los Angeles &#8220;the densest in the United States&#8221;? If you&#8217;re going to cite a statistic, at least use one that supports your thesis. </p>
+<p>I wouldn&#8217;t doubt that the sprawl reputation is a bit overblown (especially when you throw places like <a href="http://quickfacts.census.gov/qfd/states/48/4835000.html" rel="tag">Houston</a> into the mix), but to say that modern zoning has caused Los Angeles&#8217; density (and the former lack thereof causing NYC&#8217;s &#8220;sprawl&#8221;) is a bit of a stretch.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Churches unwelcome in Cleveland neighborhood">
+Churches unwelcome in Cleveland neighborhood</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 23rd, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>This <a href="http://www.freetimes.com/modules.php?op=modload&#038;name=News&#038;file=article&#038;sid=2663" rel="tag">Cleveland</a> neighborhood is unhappy with the number of churches deciding to build there. Why?</p>
+<blockquote><p>
+&#8220;The neighborhood used to be filled with stores and businesses,&#8221; [Tracey] Kirksey says. &#8220;Now it&#8217;s all parking lots.&#8221;</p>
+<p>&#8220;Those churches, those doors are shut [most of the week]. They open on Sunday for a few hours, and on Wednesday for Bible study.&#8221;</p>
+<p>&#8220;Anyone can open a church anywhere &#8230; There&#8217;s too many churches. You&#8217;ve got a church on a street corner, but the area around them is in despair. What is the church there for?&#8221;
+</p></blockquote>
+<p>What indeed. However, further along in the article, one long-standing, respected church considers opening a grocery store and adding housing. I&#8217;d be interested in seeing how far this progresses and if the neighboring congregations take a cue.<br /></p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Poooooor Wal-Mart&#8230;">
+Poooooor Wal-Mart&#8230;</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 23rd, 2005
+</div>
+<div class="art-PostContent">
+
+          <p><a href="http://www.washingtonpost.com/wp-dyn/content/article/2005/10/20/AR2005102001973.html">Chief executive H. Lee Scott Jr. says Wal-Mart must act because consumers blame stores, not suppliers, for abuses.</a> Yeah, really taking one for the team there, Wally World. As if you haven&#8217;t dictated the business practices of those suppliers for the last decade. Hypocrites. </p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to New forum">
+New forum</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 22nd, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>I&#8217;ve added a <a href="http://www.jlleblanc.com/index.php?option=com_joomlaboard&#038;Itemid=62">forum</a> to my <a href="http://www.joomla.org" rel="tag">Joomla!</a> programming website, as I&#8217;ve been getting a steady stream of e-mail related to my <a href="http://www.jlleblanc.com/joomla/Articles/Podcast_beta_3%2C_released/" rel="tag">podcasting</a> component and people are beginning to ask a lot of repeat questions. We&#8217;ll just have to see how this goes.</p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <span>Comments Closed</span>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Bland candidate alert">
+Bland candidate alert</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 18th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>The Pittsburgh Post-Gazette reports that <a href="http://www.post-gazette.com/pg/05291/590329.stm" rel="tag">Bill Scranton</a> has officially begun his campaign for governor of Pennsylvania. From the article, Scranton appears to be the new Tom Ridge: from one of the smaller cities, apparently conservative, and yet pro-choice (although supportive of current abortion regulations). Wants to lower taxes, but doesn&#8217;t want to go as far as any of the other candidates have suggested. It&#8217;s business as usual with Scranton. This is just the kind of candidate Pennsylvania loves to vote for. Bleh. </p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Bland candidate alert">1 Comment &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+<h2 class="art-PostHeader">
+<a href="../../index.html" rel="bookmark" title="Permanent Link to Consumerism, McMansions, gentrification, and big huge lightning rods">
+Consumerism, McMansions, gentrification, and big huge lightning rods</a>
+</h2>
+<div class="art-PostHeaderIcons art-metadata-icons">
+October 17th, 2005
+</div>
+<div class="art-PostContent">
+
+          <p>Busy weekend over at <a href="http://www.getreligion.org/?p=1123">Get Religion</a>. The general gist of the post is that oversized homes forced into older neighborhoods with exclusively private inhabitants are a bad thing (I wholeheartedly agree). <br />However, the commenters soon rushed in accusing the authors of either trying to deny large families * adequate housing or forcing their own views of order on poorer, old neighborhoods. This heated debate demonstrates that churches desparately need to play an active role in rebuilding our cities and neighborhoods, if carefully.</p>
+<p>* <i>I grew up in a family some people would consider large (5 children), and we made use of a home significantly smaller than one of these McMansions, although still larger than an average home in the area.</i></p>
+                  
+</div>
+<div class="cleared"></div>
+<div class="art-PostFooterIcons art-metadata-icons">
+Posted in Uncategorized | <a href="../../index.html#comments" title="Comment on Consumerism, McMansions, gentrification, and big huge lightning rods">3 Comments &#187;</a>
+</div>
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<div class="art-Post">
+    <div class="art-Post-tl"></div>
+    <div class="art-Post-tr"></div>
+    <div class="art-Post-bl"></div>
+    <div class="art-Post-br"></div>
+    <div class="art-Post-tc"></div>
+    <div class="art-Post-bc"></div>
+    <div class="art-Post-cl"></div>
+    <div class="art-Post-cr"></div>
+    <div class="art-Post-cc"></div>
+    <div class="art-Post-body">
+<div class="art-Post-inner art-article">
+
+<div class="art-PostContent">
+
+<div class="navigation">
+	<div class="alignleft"><a href="../24/index.html" >&laquo; Older Entries</a></div>
+	<div class="alignright"><a href="../22/index.html" >Newer Entries &raquo;</a></div>
+</div>
+
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+
+</div>
+<div class="art-sidebar1">      
+<div id="text-3" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://www.lynda.com/JosephLeBlanc" alt="Joomla! tutorials" border="0">Check out my Lynda.com video tutorials on Joomla 1.7 and 1.5!</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-4" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Comment policy</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget">All comments must be on topic. Off-topic comments will be deleted. Please use your real name. Comments coming from the same visitor across multiple posts in a short period of time will be considered spamming.</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Recent Comments</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<ul id="recentcomments"><li class="recentcomments"><a href='http://www.bryantsmith.com/template/' rel='external nofollow' class='url'>CSS Templates</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15462">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15459">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://osiris.samybaxy.net' rel='external nofollow' class='url'>Samybaxy</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15458">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.jlleblanc.com' rel='external nofollow' class='url'>Joe LeBlanc</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15453">Joomla&#8217;s True Merit</a></li><li class="recentcomments"><a href='http://www.FreemanFeedback.com' rel='external nofollow' class='url'>Thomas Freeman</a> on <a href="../../joomlas-true-merit/comment-page-1/index.html#comment-15452">Joomla&#8217;s True Merit</a></li></ul>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-5" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Coworking at&#8230;</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href="http://hubaustin.com">HubAustin</a></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="linkcat-2" class="widget widget_links"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Blogroll</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.alledia.com/blog/" rel="acquaintance met">Alledia</a></li>
+<li><a href="http://benramsey.com" rel="acquaintance met">Ben Ramsey</a></li>
+<li><a href="http://brandonsavage.net" rel="colleague">Brandon Savage</a></li>
+<li><a href="http://www.caseysoftware.com/blog" rel="colleague">CaseySoftware</a></li>
+<li><a href="http://shiflett.org/">Chris Shiflett</a></li>
+<li><a href="http://citycomfortsblog.typepad.com/cities/">City Comforts, the blog</a></li>
+<li><a href="http://blog.corywebb.com">Cory Webb</a></li>
+<li><a href="http://www.inshaw.com/blog/">In Shaw</a></li>
+<li><a href="http://www.joelonsoftware.com">Joel on Software</a></li>
+<li><a href="http://www.joomlaperformance.com/home/" rel="acquaintance met">Joomla Performance</a></li>
+<li><a href="http://nataliemlewis.wordpress.com/" rel="friend met colleague" title="Get Free!">Natalie M. Lewis</a></li>
+<li><a href="http://www.picnet.net/blog" rel="colleague">PICnet Blog</a></li>
+<li><a href="http://terrychay.com/blog/">Terry Chay</a></li>
+<li><a href="http://blog.spacemonkeylabs.com/" rel="colleague">The Spacemonkey Chronicles</a></li>
+<li><a href="http://zviband.com/" rel="colleague">Zvi Band</a></li>
+
+	</ul>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>
+<div id="text-1" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><p><a href="http://www.walkscore.com">My Walk Score is 75, what's yours?</a></p></div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="tag_cloud-2" class="widget widget_tag_cloud"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockHeader">
+    <div class="art-header-tag-icon">
+        <div class="t">Tags</div>
+    </div>
+</div><div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+<div class="tagcloud"><a href='../../tag/book/index.html' class='tag-link-114' title='2 topics' style='font-size: 9.9236641221374pt;'>book</a>
+<a href='../../tag/chicago/index.html' class='tag-link-71' title='4 topics' style='font-size: 12.274809160305pt;'>chicago</a>
+<a href='../../tag/css/index.html' class='tag-link-51' title='4 topics' style='font-size: 12.274809160305pt;'>css</a>
+<a href='../../tag/dcphp/index.html' class='tag-link-26' title='8 topics' style='font-size: 14.946564885496pt;'>dcphp</a>
+<a href='../../tag/documentation/index.html' class='tag-link-34' title='3 topics' style='font-size: 11.206106870229pt;'>documentation</a>
+<a href='../../tag/drupal/index.html' class='tag-link-6' title='6 topics' style='font-size: 13.87786259542pt;'>drupal</a>
+<a href='../../tag/events/index.html' class='tag-link-29' title='5 topics' style='font-size: 13.129770992366pt;'>events</a>
+<a href='../../tag/fb/index.html' class='tag-link-137' title='9 topics' style='font-size: 15.480916030534pt;'>fb</a>
+<a href='../../tag/friends/index.html' class='tag-link-128' title='9 topics' style='font-size: 15.480916030534pt;'>friends</a>
+<a href='../../tag/housekeeping/index.html' class='tag-link-3' title='1 topic' style='font-size: 8pt;'>housekeeping</a>
+<a href='../../tag/howtojoomla/index.html' class='tag-link-146' title='3 topics' style='font-size: 11.206106870229pt;'>howtojoomla</a>
+<a href='../../tag/html/index.html' class='tag-link-50' title='4 topics' style='font-size: 12.274809160305pt;'>html</a>
+<a href='../../tag/jab11/index.html' class='tag-link-167' title='2 topics' style='font-size: 9.9236641221374pt;'>jab11</a>
+<a href='../../tag/javascript/index.html' class='tag-link-14' title='4 topics' style='font-size: 12.274809160305pt;'>javascript</a>
+<a href='../../tag/joomla/index.html' class='tag-link-8' title='40 topics' style='font-size: 22pt;'>joomla</a>
+<a href='../../tag/joomla-15/index.html' class='tag-link-31' title='12 topics' style='font-size: 16.656488549618pt;'>Joomla 1.5</a>
+<a href='../../tag/joomladay/index.html' class='tag-link-153' title='2 topics' style='font-size: 9.9236641221374pt;'>joomladay</a>
+<a href='../../tag/joomlaexpo/index.html' class='tag-link-70' title='5 topics' style='font-size: 13.129770992366pt;'>joomlaexpo</a>
+<a href='../../tag/jquery/index.html' class='tag-link-13' title='4 topics' style='font-size: 12.274809160305pt;'>jquery</a>
+<a href='../../tag/lyndacom/index.html' class='tag-link-106' title='3 topics' style='font-size: 11.206106870229pt;'>lynda.com</a>
+<a href='../../tag/missions/index.html' class='tag-link-142' title='7 topics' style='font-size: 14.412213740458pt;'>missions</a>
+<a href='../../tag/mootools/index.html' class='tag-link-119' title='2 topics' style='font-size: 9.9236641221374pt;'>mootools</a>
+<a href='../../tag/mvc/index.html' class='tag-link-120' title='2 topics' style='font-size: 9.9236641221374pt;'>mvc</a>
+<a href='../../tag/philippines/index.html' class='tag-link-141' title='8 topics' style='font-size: 14.946564885496pt;'>philippines</a>
+<a href='../../tag/php/index.html' class='tag-link-4' title='13 topics' style='font-size: 17.083969465649pt;'>php</a>
+<a href='../../tag/php-appalachia/index.html' class='tag-link-64' title='2 topics' style='font-size: 9.9236641221374pt;'>php appalachia</a>
+<a href='../../tag/phptek/index.html' class='tag-link-127' title='2 topics' style='font-size: 9.9236641221374pt;'>phptek</a>
+<a href='../../tag/podcast-suite/index.html' class='tag-link-55' title='7 topics' style='font-size: 14.412213740458pt;'>podcast suite</a>
+<a href='../../tag/products/index.html' class='tag-link-59' title='2 topics' style='font-size: 9.9236641221374pt;'>products</a>
+<a href='../../tag/programming/index.html' class='tag-link-61' title='2 topics' style='font-size: 9.9236641221374pt;'>programming</a>
+<a href='../../tag/security/index.html' class='tag-link-9' title='4 topics' style='font-size: 12.274809160305pt;'>security</a>
+<a href='../../tag/seo/index.html' class='tag-link-72' title='3 topics' style='font-size: 11.206106870229pt;'>seo</a>
+<a href='../../tag/skype/index.html' class='tag-link-84' title='2 topics' style='font-size: 9.9236641221374pt;'>skype</a>
+<a href='../../tag/software-business/index.html' class='tag-link-57' title='2 topics' style='font-size: 9.9236641221374pt;'>software business</a>
+<a href='../../tag/templates/index.html' class='tag-link-122' title='2 topics' style='font-size: 9.9236641221374pt;'>templates</a>
+<a href='../../tag/templating/index.html' class='tag-link-47' title='3 topics' style='font-size: 11.206106870229pt;'>templating</a>
+<a href='../../tag/theming/index.html' class='tag-link-46' title='2 topics' style='font-size: 9.9236641221374pt;'>theming</a>
+<a href='../../tag/timothy-internship-program/index.html' class='tag-link-164' title='6 topics' style='font-size: 13.87786259542pt;'>timothy internship program</a>
+<a href='../../tag/training/index.html' class='tag-link-74' title='2 topics' style='font-size: 9.9236641221374pt;'>training</a>
+<a href='../../tag/twitter/index.html' class='tag-link-81' title='3 topics' style='font-size: 11.206106870229pt;'>twitter</a>
+<a href='../../tag/validation/index.html' class='tag-link-52' title='2 topics' style='font-size: 9.9236641221374pt;'>validation</a>
+<a href='../../tag/video/index.html' class='tag-link-107' title='3 topics' style='font-size: 11.206106870229pt;'>video</a>
+<a href='../../tag/washington-dc/index.html' class='tag-link-28' title='5 topics' style='font-size: 13.129770992366pt;'>washington dc</a>
+<a href='../../tag/widget-devcamp/index.html' class='tag-link-25' title='2 topics' style='font-size: 9.9236641221374pt;'>widget devcamp</a>
+<a href='../../tag/wordpress/index.html' class='tag-link-7' title='6 topics' style='font-size: 13.87786259542pt;'>wordpress</a></div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-2" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><div id="twitter_div">
+<h2 class="twitter-title">Twitter Updates</h2>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/jlleblanc.json?callback=twitterCallback2&count=5"></script>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div><div id="text-7" class="widget widget_text"><div class="art-Block">
+    <div class="art-Block-body">
+<div class="art-BlockContent">
+    <div class="art-BlockContent-body">
+			<div class="textwidget"><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array' title='JavaScript Array .every'><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JavaScript Array .every'/></a>
+</div>
+		
+		<div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div></div>
+</div>
+<div class="cleared"></div>
+
+<div class="art-Footer">
+    <div class="art-Footer-inner">
+                <a href="../../feed/index.html" class="art-rss-tag-icon" title="RSS"></a>
+                <div class="art-Footer-text">
+<p>
+<a href='index.html#'>Contact Us</a> | <a href='index.html#'>Terms of Use</a> | <a href='index.html#'>Trademarks</a> | <a href='index.html#'>Privacy Statement</a><br />Copyright &copy; 2009 Design vs. Develop. All Rights Reserved.</p>
+</div>
+    </div>
+    <div class="art-Footer-background">
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+</div>
+
+<!-- 19 queries. 0.465 seconds. -->
+<div></div>
+</body>
+<script type="text/javascript">
+var woopra_id = '3034226658';
+</script>
+<script src="http://static.woopra.com/js/woopra.js"></script>
+</html>
